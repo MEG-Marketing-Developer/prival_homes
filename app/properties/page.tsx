@@ -95,7 +95,7 @@ const Properties = () => {
           <h1 className="main-color mt-20 mb-4 text-[45px] md:text-[55px]">
             Properties
           </h1>
-          <h2 className="mb-6 text-3xl md:text-2xl leading-10">
+          <h2 className="mb-12 text-3xl md:text-2xl leading-10">
             Showing 440 results search
           </h2>
         </div>

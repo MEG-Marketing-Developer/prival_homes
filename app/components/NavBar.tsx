@@ -56,32 +56,32 @@ const NavBar = () => {
               aria-label="main"
             >
               <Link
-                className="hover:opacity-90 text-[#47664D] text-lg font-blissful"
+                className="hover:opacity-90 text-[#47664D] text-lg  font-blissful tracking-wide"
                 href={"/about-us"}
               >
                 ABOUT US
               </Link>
               <Link
                 href={"/why-us"}
-                className="hover:opacity-90 text-[#47664D] text-lg font-blissful"
+                className="hover:opacity-90 text-[#47664D] text-lg font-blissful tracking-wide"
               >
                 WHY US
               </Link>
               <Link
                 href={"/properties"}
-                className="hover:opacity-90 text-[#47664D] text-lg font-blissful"
+                className="hover:opacity-90 text-[#47664D] text-lg  font-blissful tracking-wide"
               >
                 PROPERTIES
               </Link>
               <Link
                 href={"/host-with-us"}
-                className="hover:opacity-90 text-[#47664D] text-lg font-blissful"
+                className="hover:opacity-90 text-[#47664D] text-lg  font-blissful tracking-wide"
               >
                 HOST WITH US
               </Link>
               <Link
                 href={"/contact-us"}
-                className="hover:opacity-90 text-[#47664D] text-lg font-blissful"
+                className="hover:opacity-90 text-[#47664D] text-lg  font-blissful tracking-wide"
               >
                 CONTACT US
               </Link>
