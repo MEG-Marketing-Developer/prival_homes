@@ -1,113 +1,161 @@
-import Image from 'next/image'
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="hero-clip-path hero bg-hero min-h-screen -mt-16 bg-cover">
+        <div className="hero-overlay bg-opacity-60 bg-[#3F5640]"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-4xl">
+            <h1 className="mb-12 text-5xl tracking-widest ">
+              EXPLORE YOUR LIVING WITH PRIVAL
+            </h1>
+            <button className="btn btn-primary rounded-full px-10">
+              <Link href={"/properties"}>Book Now</Link>
+            </button>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="hero-clip-path">
+        <div className="container mx-auto p-6">
+          <div>
+            <h1 className="main-color my-4 text-[55px]">Be our guest</h1>
+            <p className="tracking-normal text-3xl text-[#161615]">
+              Welcome to Prival Homes in Dubai! Enjoy stunning views, modern
+              interiors, and top-notch making Prival Homes the perfect choice
+              for your Dubai getaway.
+            </p>
+          </div>
+          <div className="grid grid-cols-4 items-center mt-32">
+            <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
+              <img src="/images/home/location.svg" className="object-contain" />
+              <p className="main-color text-2xl">Loaction</p>
+            </div>
+            <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
+              <img src="/images/home/interior.svg" />
+              <p className="main-color text-2xl">Interior</p>
+            </div>
+            <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
+              <img src="/images/home/facilities.svg" />
+              <p className="main-color text-2xl">Facilities</p>
+            </div>
+            <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
+              <img src="/images/home/services.svg" />
+              <p className="main-color text-2xl">Services</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="hero-clip-path bg-[#DDDDDD]">
+        <div className="container mx-auto pb-40 pt-32">
+          <h1 className="text-4xl sm:text-[55px] main-color my-8 text-center">
+            Our Locations
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mb-10 gap-16 mx-20 sm:mx-2">
+            <div className="min-h-[620px] max-w-[470px] mb-20">
+              <img
+                src="images/home/home1.png"
+                className="object-fill h-[100%] hero-clip-path"
+              />
+              <h1 className="text-4xl sm:text-5xl mt-10 text-center tracking-wide">
+                Downtown
+              </h1>
+            </div>
+            <div className="min-h-[620px] max-w-[470px] mb-20">
+              <img
+                src="images/home/home3.png"
+                className="object-fill w-[100%] h-[100%] hero-clip-path"
+              />
+              <h1 className="text-4xl sm:text-5xl mt-10 text-center tracking-wide">
+                Golf retreat
+              </h1>
+            </div>
+            <div className="min-h-[620px] max-w-[470px] mb-28">
+              <img
+                src="images/home/home2.png"
+                className="object-fill w-[100%] h-[100%] hero-clip-path"
+              />
+              <h1 className="text-4xl sm:text-5xl mt-[70px] text-center tracking-wide">
+                Palm Jumeriah
+              </h1>
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
-  )
+      <div className="hero-clip-path">
+        <div className="container mx-auto p-6">
+          <div>
+            <h1 className="main-color mt-20 mb-4 text-[45px] md:text-[55px]">
+              Elevate your hosting potential
+            </h1>
+            <p className="tracking-normal text-[25px] md:text-3xl text-[#161615]">
+              We are a modern and innovative property management solution that
+              converts your property into a luxury hotel room. We manage
+              everything for you, taking away the hassle and never-ending
+              details.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <button className="  mt-10 text-white main-color-bg  max-w-[470px]  px-[80px] py-[25px] md:py-6 md:px-28 rounded-full tracking-wide">
+              GET IN TOUCH WITH US
+            </button>
+          </div>
+          <div className="my-20 ml-14 lg:flex justify-around items-center gap-20 ">
+            <div className="max-w-[600px] my-10 flex justify-center items-center">
+              <img
+                src="/images/home/bed-room.png"
+                className="object-cover w-[100%] min-h-[700px] clip-path-bottom mx-auto "
+              />
+            </div>
+            <div className="grid grid-cols-2 items-center gap-10 ">
+              <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
+                <img
+                  src="/images/home/location.svg"
+                  className="object-contain"
+                />
+                <p className="main-color text-2xl text-center">Stress Free</p>
+              </div>
+              <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
+                <img src="/images/home/interior.svg" />
+                <p className="main-color text-2xl text-center">
+                  Having Control
+                </p>
+              </div>
+              <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
+                <img src="/images/home/facilities.svg" />
+                <p className="main-color text-2xl text-center ">
+                  Local Living Experience
+                </p>
+              </div>
+              <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
+                <img src="/images/home/services.svg" />
+                <p className="main-color text-2xl text-center">
+                  Luxury Services for Guests
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="bg-[#DDDDDD] -mb-32"
+        style={{ clipPath: "polygon(0 0, 100% 18%, 100% 89%, 0 99%)" }}
+      >
+        <div className="container mx-auto pb-36 pt-28 px-6">
+          <h1 className="text-5xl main-color pt-10 pb-16">
+            Our Hosting Platforms
+          </h1>
+          <div className="flex justify-start items-center flex-wrap gap-10 max-w-[1200px]">
+            <img src="/images/home/hosting1.svg" />
+            <img src="/images/home/hosting2.svg" />
+            <img src="/images/home/hosting3.svg" />
+            <img src="/images/home/hosting4.svg" />
+            <img src="/images/home/hosting5.svg" />
+            <img src="/images/home/hosting6.svg" />
+            <img src="/images/home/hosting7.svg" />
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

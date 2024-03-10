@@ -2,26 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "avenirbook";
+  src: url("../public/fonts/avenir-book-01-webfont.woff2") format("woff2"),
+    url("../public/fonts/avenir-book-01-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: "blissful_thinkingregular";
+  src: url("../public/fonts/blissfulthinking-webfont.woff2") format("woff2"),
+    url("../public/fonts/blissfulthinking-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    font-family: "avenirbook", system-ui, sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "blissful_thinkingregular", system-ui, sans-serif;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .navBar-clip-path {
+    clip-path: polygon(100% 63%, 0% 100%, 100% 100%);
+  }
+  .footer-clip-path {
+    clip-path: polygon(0 24%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .hero-clip-path {
+    clip-path: polygon(0 6%, 100% 0, 100% 94%, 0% 100%);
+  }
+  .clip-path-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 93%);
+  }
+  .main-color {
+    color: #3f5640;
+  }
+  .main-color-bg {
+    background-color: #3f5640;
+  }
 }
