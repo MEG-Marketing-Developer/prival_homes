@@ -14,26 +14,26 @@ const ContactUs = () => {
             e.preventDefault();
           }}
         >
-          <div className="flex flex-wrap gap-x-7 gap-y-5 mb-6">
+          <div className="flex flex-wrap gap-x-7 justify-center w-full gap-y-5 mb-6">
             <input
               type="text"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-[48%]"
+              className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
               type="text"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-[48%]"
+              className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
               type="text"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-[48%]"
+              className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
               type="text"
               placeholder="Type here"
-              className="input input-bordered w-full max-w-[48%]"
+              className="input input-bordered w-full md:max-w-[48%]"
             />
           </div>
           <div>
