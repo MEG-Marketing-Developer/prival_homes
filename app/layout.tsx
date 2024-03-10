@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en" className="m-auto">
       <body>
         <NavBar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
