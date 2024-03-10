@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactUs = () => {
+const AboutUs = () => {
   return (
     <div className="bg-white mb-40">
       <div className="container mx-auto">
@@ -31,4 +31,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default AboutUs;
