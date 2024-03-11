@@ -15,7 +15,7 @@ const AboutUs = () => {
         <div className="">
           <img
             src="/images/aboutUs/about-us.png"
-            className="object-cover h-[700px] w-[100%]"
+            className="object-cover h-[700px] w-[100%] rounded-xl"
           />
         </div>
         <h1 className="main-color mt-10 px-4 mb-4 text-[45px] md:text-[55px]">

@@ -1,20 +1,20 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 import { useState } from "react";
 import { IoIosArrowDropright } from "react-icons/io";
 const NavBar = () => {
   const pathname = usePathname();
-  console.log(pathname);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
   return (
-    <header className="relative bg-[#ECECEC]">
-      <div className="absolute bg-white w-[100%] navBar-clip-path bottom-0 h-[150px] "></div>
+    <header
+      className={`relative  ${pathname === "/" ? "bg-white" : "bg-[#ECECEC]"}`}
+    >
+      <div className="absolute bg-white w-[100%] navBar-clip-path -bottom-1 h-[150px] "></div>
       <div className="container mx-auto sticky top-0 z-10  text-white  ">
         <section className="container mx-auto flex items-center justify-between pb-20 pt-12 px-6">
           <h1 className="text-3xl font-medium">

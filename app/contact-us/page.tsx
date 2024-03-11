@@ -38,7 +38,7 @@ const ContactUs = () => {
           </div>
           <div>
             <textarea
-              className="textarea textarea-bordered w-full min-h-[250px]"
+              className="textarea textarea-bordered w-full min-h-[250px] "
               placeholder="Message"
             ></textarea>
           </div>

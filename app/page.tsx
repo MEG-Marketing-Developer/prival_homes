@@ -107,7 +107,7 @@ export default function Home() {
             <div className="max-w-[600px] my-10 flex justify-center items-center">
               <img
                 src="/images/home/bed-room.png"
-                className="object-cover w-[100%] min-h-[700px] clip-path-bottom mx-auto "
+                className="object-cover rounded-xl w-[100%] min-h-[700px] clip-path-bottom mx-auto "
               />
             </div>
             <div className="grid grid-cols-2 items-center gap-10 ">

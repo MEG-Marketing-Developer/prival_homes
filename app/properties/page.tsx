@@ -100,10 +100,10 @@ const Properties = () => {
           </h2>
         </div>
         <div className="mx-10 lg:flex justify-start items-start gap-10">
-          <div className=" h-[1200px]">
+          <div className=" h-[1200px] mb-8">
             <img
               src="/images/properties/map.png"
-              className="rounded-xl h-[100%] object-cover"
+              className="rounded-xl h-[100%] object-cover "
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 mb-20 gap-8 ">
