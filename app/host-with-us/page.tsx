@@ -17,32 +17,34 @@ const HostWithUs = () => {
         <div className="grid grid-cols-2 gap-10">
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Full Name"
             className="input border border-b-2 border-b-[#707070] w-full max-w-[700px] rounded-none"
           />
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Company Name"
             className="input border border-b-2 border-b-[#707070] w-full max-w-[700px] rounded-none"
           />
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Contact Us"
             className="input border border-b-2 border-b-[#707070] w-full max-w-[700px] rounded-none"
           />
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Email"
             className="input border border-b-2 border-b-[#707070] w-full max-w-[700px] rounded-none"
           />
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Current Portfolio Value"
             className="input border border-b-2 border-b-[#707070] w-full max-w-[700px] rounded-none"
           />
         </div>
         <div className="my-10">
-          <button className="btn ">Submit</button>
+          <button className="btn px-20 text-white main-color-bg rounded-full">
+            Submit
+          </button>
         </div>
       </div>
     </div>

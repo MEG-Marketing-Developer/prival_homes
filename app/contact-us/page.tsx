@@ -17,22 +17,22 @@ const ContactUs = () => {
           <div className="flex flex-wrap gap-x-7 justify-center w-full gap-y-5 mb-6">
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="First Name"
               className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="Last Name"
               className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="Email"
               className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="Contact No"
               className="input input-bordered w-full md:max-w-[48%]"
             />
           </div>
@@ -49,7 +49,7 @@ const ContactUs = () => {
           </div>
         </form>
 
-        <footer className="rounded-lg my-20 flex p-10 bg-[#F1F1F1] justify-between">
+        <footer className="rounded-lg my-20 sm:flex p-10 bg-[#F1F1F1] justify-between">
           <div>
             <nav className="mb-4">
               <h6 className="footer-title main-color">Prival Offices</h6>
@@ -64,7 +64,7 @@ const ContactUs = () => {
               <p className="link link-hover">Seattle International Services</p>
             </nav>
           </div>
-          <div className="self-end">
+          <div className="self-end mt-10">
             <div>
               <span className="main-color font-blissful">Email : </span>
               <span className="ml-10">info@theprival.com</span>

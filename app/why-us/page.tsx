@@ -13,10 +13,13 @@ const WhyUs = () => {
           streamlined and effective approach.
         </p>
         <div className="grid grid-cols-1 gap-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
             <figure className="gap-5 md:flex">
-              <img src="/images/whyUs/whyUs1.jpg" className="rounded-3xl" />
-              <div className="divider md:divider-horizontal mt-20"></div>
+              <img
+                src="/images/whyUs/whyUs1.jpg"
+                className="rounded-3xl h-[400px] w-full sm:min-w-[400px]"
+              />
+              <div className="divider lg:divider-horizontal md:ml-6 xl:ml-[210px] mt-20"></div>
             </figure>
             <div className="px-12 py-4">
               <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
@@ -25,40 +28,57 @@ const WhyUs = () => {
               <p className="text-4xl text-[#1D1D1B]">Blend with the Local</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
             <figure className="gap-5 md:flex">
-              <img src="/images/whyUs/whyUs1.jpg" className="rounded-3xl" />
-              <div className="divider md:divider-horizontal mt-20"></div>
+              <img
+                src="/images/whyUs/whyUs2.jpg"
+                className="rounded-3xl h-[400px] w-full sm:min-w-[400px]"
+              />
+              <div className="divider lg:divider-horizontal  md:ml-6 xl:ml-[210px] mt-20"></div>
             </figure>
             <div className="px-12 py-4">
               <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
-                Local Living Experience
+                Luxury Services for Guests
               </h1>
-              <p className="text-4xl text-[#1D1D1B]">Blend with the Local</p>
+              <p className="text-4xl text-[#1D1D1B]">
+                Partnered with leaders in the market of Vacation Homes Rental
+              </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
             <figure className="gap-5 md:flex">
-              <img src="/images/whyUs/whyUs1.jpg" className="rounded-3xl" />
-              <div className="divider md:divider-horizontal mt-20"></div>
+              <img
+                src="/images/whyUs/whyUs3.jpg"
+                className="rounded-3xl h-[400px] w-full sm:min-w-[400px]"
+              />
+              <div className="divider lg:divider-horizontal md:ml-6  xl:ml-[210px] mt-20"></div>
             </figure>
             <div className="px-12 py-4">
               <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
-                Local Living Experience
+                Stress Free
               </h1>
-              <p className="text-4xl text-[#1D1D1B]">Blend with the Local</p>
+              <p className="text-4xl text-[#1D1D1B]">
+                Taking care of everything from managing all the properties to
+                handling guests
+              </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
             <figure className="gap-5 md:flex">
-              <img src="/images/whyUs/whyUs1.jpg" className="rounded-3xl" />
-              <div className="divider md:divider-horizontal mt-20"></div>
+              <img
+                src="/images/whyUs/whyUs4.jpg"
+                className="rounded-3xl h-[400px] w-full sm:min-w-[400px]"
+              />
+              <div className="divider lg:divider-horizontal md:ml-6  xl:ml-[210px] mt-20"></div>
             </figure>
             <div className="px-12 py-4">
               <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
-                Local Living Experience
+                Having Control
               </h1>
-              <p className="text-4xl text-[#1D1D1B]">Blend with the Local</p>
+              <p className="text-4xl text-[#1D1D1B]">
+                Having control of your home on dates that you would like to
+                stay.
+              </p>
             </div>
           </div>
         </div>

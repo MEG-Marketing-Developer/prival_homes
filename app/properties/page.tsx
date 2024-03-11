@@ -14,7 +14,7 @@ const Properties = () => {
           }}
         >
           <div className="flex gap-2 md:gap-10 flex-wrap md:flex-nowrap justify-center">
-            <label className="input input-bordered flex items-center grow ">
+            <label className="input input-bordered flex items-center grow bg-[#ECECEA] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -29,12 +29,12 @@ const Properties = () => {
               </svg>
               <input
                 type="text"
-                className="grow ml-2"
+                className="grow ml-2 "
                 placeholder="Enter The Location"
               />
             </label>
-            <div className="">
-              <select className="select select-bordered w-full max-w-xs">
+            <div>
+              <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
                 <option disabled selected>
                   Sort by: Price
                 </option>
@@ -43,14 +43,14 @@ const Properties = () => {
               </select>
               <div className="flex gap-5 items-center mt-5">
                 <span>Price</span>
-                <select className="select select-bordered w-full max-w-xs">
+                <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
                   <option disabled selected>
                     Min
                   </option>
                   <option>$100</option>
                   <option>$200</option>
                 </select>
-                <select className="select select-bordered w-full max-w-xs">
+                <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
                   <option disabled selected>
                     Max
                   </option>
@@ -60,29 +60,29 @@ const Properties = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
-            <select className="select select-bordered w-full max-w-xs">
+          <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
+            <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
               <option disabled selected>
                 Property Type
               </option>
               <option>$100</option>
               <option>$200</option>
             </select>
-            <select className="select select-bordered w-full max-w-xs">
+            <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
               <option disabled selected>
                 Location
               </option>
               <option>$100</option>
               <option>$200</option>
             </select>
-            <select className="select select-bordered w-full max-w-xs">
+            <select className="select select-bordered w-full max-w-xs  bg-[#ECECEA]">
               <option disabled selected>
                 Rooms
               </option>
               <option>$100</option>
               <option>$200</option>
             </select>
-            <select className="select select-bordered w-full max-w-xs">
+            <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
               <option disabled selected>
                 Bathroom
               </option>

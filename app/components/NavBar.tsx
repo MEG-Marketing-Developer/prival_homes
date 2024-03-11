@@ -1,8 +1,12 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { useState } from "react";
 import { IoIosArrowDropright } from "react-icons/io";
 const NavBar = () => {
+  const pathname = usePathname();
+  console.log(pathname);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -50,7 +54,7 @@ const NavBar = () => {
               </div>
             </button>
             <nav
-              className={`hidden space-x-8 text-xl md:block ${
+              className={`hidden md:space-x-6 lg:space-x-14 text-xl md:block ${
                 isMobileMenuOpen ? "hidden" : "flex"
               }`}
               aria-label="main"
