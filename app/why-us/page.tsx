@@ -1,5 +1,9 @@
+import Image from "next/image";
 import React from "react";
-
+import whyUs1 from "@/public/images/whyUs/whyUs1.jpg";
+import whyUs2 from "@/public/images/whyUs/whyUs2.jpg";
+import whyUs3 from "@/public/images/whyUs/whyUs3.jpg";
+import whyUs4 from "@/public/images/whyUs/whyUs4.jpg";
 const WhyUs = () => {
   return (
     <div className="bg-white">
@@ -14,12 +18,12 @@ const WhyUs = () => {
         </p>
         <div className="grid grid-cols-1 gap-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
-            <figure className="gap-5 md:flex">
-              <img
-                src="/images/whyUs/whyUs1.jpg"
-                className="rounded-3xl h-[400px] w-full sm:min-w-[400px]"
+            <figure className="relative gap-5 md:flex  h-[400px]">
+              <Image
+                src={whyUs1}
+                alt="street"
+                className="object-cover rounded-xl"
               />
-              <div className="divider lg:divider-horizontal md:ml-6 xl:ml-[210px] mt-20"></div>
             </figure>
             <div className="px-12 py-4">
               <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
@@ -29,12 +33,13 @@ const WhyUs = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
-            <figure className="gap-5 md:flex">
-              <img
-                src="/images/whyUs/whyUs2.jpg"
-                className="rounded-3xl h-[400px] w-full sm:min-w-[400px]"
+            <figure className="relative gap-5 md:flex h-[400px]">
+              <Image
+                src={whyUs2}
+                alt="street"
+                fill
+                className="object-cover rounded-xl"
               />
-              <div className="divider lg:divider-horizontal  md:ml-6 xl:ml-[210px] mt-20"></div>
             </figure>
             <div className="px-12 py-4">
               <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
@@ -46,12 +51,12 @@ const WhyUs = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
-            <figure className="gap-5 md:flex">
-              <img
-                src="/images/whyUs/whyUs3.jpg"
-                className="rounded-3xl h-[400px] w-full sm:min-w-[400px]"
+            <figure className="relative gap-5 md:flex  h-[400px]">
+              <Image
+                src={whyUs3}
+                alt="street"
+                className="object-cover rounded-xl"
               />
-              <div className="divider lg:divider-horizontal md:ml-6  xl:ml-[210px] mt-20"></div>
             </figure>
             <div className="px-12 py-4">
               <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
@@ -64,12 +69,12 @@ const WhyUs = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
-            <figure className="gap-5 md:flex">
-              <img
-                src="/images/whyUs/whyUs4.jpg"
-                className="rounded-3xl h-[400px] w-full sm:min-w-[400px]"
+            <figure className="relative gap-5 md:flex  h-[400px]">
+              <Image
+                src={whyUs4}
+                alt="street"
+                className="object-cover rounded-xl"
               />
-              <div className="divider lg:divider-horizontal md:ml-6  xl:ml-[210px] mt-20"></div>
             </figure>
             <div className="px-12 py-4">
               <h1 className="main-color mb-6 text-[45px] md:text-[50px]">

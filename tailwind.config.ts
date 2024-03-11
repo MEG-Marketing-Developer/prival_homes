@@ -16,9 +16,6 @@ const config: Config = {
       ],
     },
     extend: {
-      backgroundImage: {
-      'hero': "url('/images/home/hero.jpg')",
-      },
       screens: {
         'widescreen': { 'raw': '(min-aspect-ratio: 3/2)' },
         'tallscreen': { 'raw': '(min-aspect-ratio: 13/20)' },

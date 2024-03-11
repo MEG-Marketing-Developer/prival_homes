@@ -3,11 +3,29 @@ import { MdOutlineFreeBreakfast } from "react-icons/md";
 import { TfiPanel } from "react-icons/tfi";
 import { TbStarsFilled } from "react-icons/tb";
 import { MdOutlineLiving } from "react-icons/md";
+import Image from "next/image";
+import hero from "@/public/images/home/hero.jpg";
+import location from "@/public/images/home/location.svg";
+import interior from "@/public/images/home/interior.svg";
+import facilities from "@/public/images/home/facilities.svg";
+import services from "@/public/images/home/services.svg";
+import downtown from "@/public/images/home/home1.png";
+import golf from "@/public/images/home/home2.png";
+import palm from "@/public/images/home/home3.png";
+import bedRoom from "@/public/images/home/bed-room.png";
 export default function Home() {
   return (
     <>
-      <div className="hero-clip-path hero bg-hero min-h-screen -mt-16 bg-cover">
-        <div className="hero-overlay bg-opacity-60 bg-[#3F5640]"></div>
+      <div className="hero-clip-path relative hero min-h-screen -mt-16 ">
+        <Image
+          src={hero}
+          alt="hero"
+          fill
+          quality={100}
+          priority
+          className="object-cover -z-10 hero-clip-path "
+        />
+        <div className="hero-overlay bg-opacity-60 bg-[#3F5640] hero-clip-path"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-4xl">
             <h1 className="mb-12 text-5xl tracking-widest ">
@@ -31,19 +49,19 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-4 items-center mt-32">
             <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
-              <img src="/images/home/location.svg" className="object-contain" />
+              <Image src={location} alt="location" />
               <p className="main-color text-2xl">Loaction</p>
             </div>
             <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
-              <img src="/images/home/interior.svg" />
+              <Image src={interior} alt="interior" />
               <p className="main-color text-2xl">Interior</p>
             </div>
             <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
-              <img src="/images/home/facilities.svg" />
+              <Image src={facilities} alt="facilities" />
               <p className="main-color text-2xl">Facilities</p>
             </div>
             <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
-              <img src="/images/home/services.svg" />
+              <Image src={services} alt="services" />
               <p className="main-color text-2xl">Services</p>
             </div>
           </div>
@@ -55,29 +73,44 @@ export default function Home() {
             Our Locations
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mb-10 gap-16 mx-20 sm:mx-2">
-            <div className="min-h-[620px] max-w-[470px] mb-20 ">
-              <img
-                src="images/home/home1.png"
-                className="object-fill h-[100%] hero-clip-path rounded-2xl "
-              />
+            <div className=" mb-20 ">
+              <div className="relative min-h-[600px] max-w-[470px]">
+                <Image
+                  src={downtown}
+                  alt="downtown-img"
+                  fill
+                  quality={75}
+                  className="object-cover hero-clip-path rounded-2xl "
+                />
+              </div>
               <h1 className="text-4xl sm:text-5xl mt-10 text-center tracking-wide">
                 Downtown
               </h1>
             </div>
             <div className="min-h-[620px] max-w-[470px] mb-20">
-              <img
-                src="images/home/home3.png"
-                className="object-fill w-[100%] h-[100%] hero-clip-path rounded-2xl"
-              />
+              <div className="relative min-h-[600px] max-w-[470px]">
+                <Image
+                  src={golf}
+                  alt="golf-img"
+                  fill
+                  quality={75}
+                  className="object-cover hero-clip-path rounded-2xl "
+                />
+              </div>
               <h1 className="text-4xl sm:text-5xl mt-10 text-center tracking-wide">
                 Golf retreat
               </h1>
             </div>
             <div className="min-h-[620px] max-w-[470px] mb-28">
-              <img
-                src="images/home/home2.png"
-                className="object-fill w-[100%] h-[100%] hero-clip-path rounded-2xl"
-              />
+              <div className="relative min-h-[600px] max-w-[470px]">
+                <Image
+                  src={palm}
+                  alt="palm-img"
+                  fill
+                  quality={75}
+                  className="object-cover hero-clip-path rounded-2xl "
+                />
+              </div>
               <h1 className="text-4xl sm:text-5xl mt-[70px] text-center tracking-wide">
                 Palm Jumeriah
               </h1>
@@ -98,18 +131,12 @@ export default function Home() {
               details.
             </p>
           </div>
-          <div className="flex justify-center">
-            <button className="  mt-10 text-white main-color-bg  max-w-[470px]  px-[80px] py-[25px] md:py-6 md:px-28 rounded-full tracking-wide">
+          <div className="flex justify-center sm:justify-start mb-20">
+            <button className=" mt-10 text-white main-color-bg  max-w-[470px]  px-[80px] py-[25px] md:py-6 md:px-28 rounded-full tracking-wide">
               GET IN TOUCH WITH US
             </button>
           </div>
-          <div className="my-20 ml-14 lg:flex justify-around items-center gap-20 ">
-            <div className="max-w-[600px] my-10 flex justify-center items-center">
-              <img
-                src="/images/home/bed-room.png"
-                className="object-cover rounded-xl w-[100%] min-h-[700px] clip-path-bottom mx-auto "
-              />
-            </div>
+          <div className="my-20 md:-mt-10 ml-14 lg:flex justify-around items-center gap-20 ">
             <div className="grid grid-cols-2 items-center gap-10 ">
               <div className="p-5 flex flex-col justify-center items-center gap-4 tracking-wide">
                 <MdOutlineFreeBreakfast size={100} className="main-color" />
@@ -133,6 +160,14 @@ export default function Home() {
                   Luxury Services for Guests
                 </p>
               </div>
+            </div>
+            <div className="relative w-full max-w-[700px] min-h-[700px] my-10 flex justify-center items-center">
+              <Image
+                src={bedRoom}
+                alt="bed-room"
+                fill
+                className="object-cover clip-path-bottom"
+              />
             </div>
           </div>
         </div>

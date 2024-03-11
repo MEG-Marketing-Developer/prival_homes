@@ -1,5 +1,6 @@
 import React from "react";
-
+import aboutImg from "@/public/images/aboutUs/about-us.png";
+import Image from "next/image";
 const AboutUs = () => {
   return (
     <div className="bg-white mb-40">
@@ -12,10 +13,14 @@ const AboutUs = () => {
           portfolios with facility management and operational partners for a
           streamlined and effective approach.
         </p>
-        <div className="">
-          <img
-            src="/images/aboutUs/about-us.png"
-            className="object-cover h-[700px] w-[100%] rounded-xl"
+        <div className="relative h-[700px] w-[100%] rounded-xl">
+          <Image
+            src={aboutImg}
+            alt="about-img"
+            fill
+            priority
+            quality={75}
+            className="object-cover rounded-xl"
           />
         </div>
         <h1 className="main-color mt-10 px-4 mb-4 text-[45px] md:text-[55px]">
