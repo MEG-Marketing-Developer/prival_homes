@@ -1,8 +1,13 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { MdBathroom } from "react-icons/md";
 import { MdBedroomParent } from "react-icons/md";
-
+import map from "@/public/images/properties/map.png";
+import prop1 from "@/public/images/properties/prop1.png";
+import prop2 from "@/public/images/properties/prop2.png";
+import prop3 from "@/public/images/properties/prop3.png";
+import prop4 from "@/public/images/properties/prop4.png";
 const Properties = () => {
   return (
     <div className="bg-white">
@@ -100,16 +105,10 @@ const Properties = () => {
           </h2>
         </div>
         <div className="mx-10 lg:flex justify-start items-start gap-10">
-          <div className=" h-[1200px] mb-8">
-            <img
-              src="/images/properties/map.png"
-              className="rounded-xl h-[100%] object-cover "
-            />
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 mb-20 gap-8 ">
-            <div className="card bg-base-100 shadow-xl ">
+            <div className="card bg-base-100 shadow-xl w-[90%] ">
               <figure className="h-[320px]">
-                <img src="images/properties/prop1.png" alt="prop" />
+                <Image src={prop1} alt="properties" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title tracking-wider leading-7">
@@ -134,9 +133,9 @@ const Properties = () => {
                 </h1>
               </div>
             </div>
-            <div className="card bg-base-100 shadow-xl ">
+            <div className="card bg-base-100 shadow-xl w-[90%]">
               <figure className="h-[320px]">
-                <img src="images/properties/prop2.png" alt="prop" />
+                <Image src={prop2} alt="properties" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title tracking-wider leading-7">
@@ -161,9 +160,9 @@ const Properties = () => {
                 </h1>
               </div>
             </div>
-            <div className="card bg-base-100 shadow-xl ">
+            <div className="card bg-base-100 shadow-xl w-[90%] ">
               <figure className="h-[320px]">
-                <img src="images/properties/prop3.png" alt="prop" />
+                <Image src={prop3} alt="properties" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title tracking-wider leading-7">
@@ -188,9 +187,9 @@ const Properties = () => {
                 </h1>
               </div>
             </div>
-            <div className="card bg-base-100 shadow-xl ">
+            <div className="card bg-base-100 shadow-xl w-[90%]">
               <figure className="h-[320px]">
-                <img src="images/properties/prop4.png" alt="prop" />
+                <Image src={prop4} alt="properties" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title tracking-wider leading-7">
@@ -217,6 +216,16 @@ const Properties = () => {
             </div>
 
             <div className="btn">Learn more</div>
+          </div>
+          <div className="relative h-[1200px] mb-8 w-full">
+            <Image
+              src={map}
+              alt="map"
+              fill
+              priority
+              quality={100}
+              className="rounded-xl object-cover "
+            />
           </div>
         </div>
       </div>
