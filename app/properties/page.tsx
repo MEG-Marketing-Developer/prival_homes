@@ -215,7 +215,7 @@ const Properties = () => {
               </div>
             </div>
 
-            <div className="btn">Learn more</div>
+            <div className="btn max-w-[420px]">Learn more</div>
           </div>
           <div className="relative h-[1200px] mb-8 w-full">
             <Image

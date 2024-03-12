@@ -45,6 +45,12 @@
   .clip-path-bottom {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 94%);
   }
+  .clip-path-top {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+  }
+  .clip-path-both {
+    clip-path: polygon(0 0, 100% 18%, 100% 89%, 0 99%);
+  }
   .main-color {
     color: #3f5640;
   }
