@@ -8,79 +8,125 @@ const WhyUs = () => {
   return (
     <div className="bg-white">
       <div className="container mx-auto my-20">
-        <h1 className="main-color mt-20 px-4 mb-4 text-[45px] md:text-[55px]">
+        <h3 data-aos="fade-up" className="main-color mt-20 mb-4">
           Why Us
-        </h1>
-        <p className="mb-6 text-3xl px-4 md:text-2xl leading-10">
+        </h3>
+        <p data-aos="fade-up" className="mb-6">
           Prival excels as a vacation home rental company, harmonizing property
           portfolios with facility management and operational partners for a
           streamlined and effective approach.
         </p>
-        <div className="grid grid-cols-1 gap-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
-            <figure className="relative gap-5 md:flex  h-[400px]">
+        <div className="flex flex-col gap-10">
+          <div
+            className="flex justify-around items-start 
+          lg:justify-start lg:gap-x-10 lg:py-10 lg:px-16
+           rounded-lg bg-[#eee] p-4"
+          >
+            <figure
+              data-aos="fade-right"
+              className="relative h-[100px] min-w-[125px] max-w-[125px]
+            sm:h-[380px] sm:min-w-[540px] sm:max-w-[540px] 
+            
+            xl:h-[400px] xl:min-w-[600px] xl:max-w-[600px]"
+            >
               <Image
                 src={whyUs1}
                 alt="street"
-                className="object-cover rounded-xl"
+                fill
+                className="object-cover rounded-lg max-w-[100%]"
               />
             </figure>
-            <div className="px-12 py-4">
-              <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
+            <div className="divider divider-horizontal"></div>
+            <div data-aos="fade-left">
+              <h3 className="main-color my-2  text-[.6875rem] lg:text-5xl lg:mb-6">
                 Local Living Experience
-              </h1>
-              <p className="text-4xl text-[#1D1D1B]">Blend with the Local</p>
+              </h3>
+              <p className=" text-[#1D1D1B] text-[.5625rem] lg:text-2xl">
+                Blend with the Local
+              </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
-            <figure className="relative gap-5 md:flex h-[400px]">
+          <div
+            className="flex justify-around items-start 
+          lg:justify-start lg:gap-x-10 lg:py-10 lg:px-16
+           rounded-lg bg-[#eee] p-4"
+          >
+            <figure
+              data-aos="fade-right"
+              className="relative h-[100px] min-w-[125px] max-w-[125px] 
+            sm:h-[380px] sm:min-w-[540px] sm:max-w-[540px] 
+            xl:h-[400px] xl:min-w-[600px] xl:max-w-[600px]"
+            >
               <Image
                 src={whyUs2}
                 alt="street"
                 fill
-                className="object-cover rounded-xl"
+                className="object-cover rounded-lg max-w-[100%]"
               />
             </figure>
-            <div className="px-12 py-4">
-              <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
+            <div className="divider divider-horizontal"></div>
+            <div data-aos="fade-left">
+              <h3 className="main-color my-2  text-[.6875rem]  lg:text-5xl lg:mb-6">
                 Luxury Services for Guests
-              </h1>
-              <p className="text-4xl text-[#1D1D1B]">
+              </h3>
+              <p className=" text-[#1D1D1B] text-[.5625rem] lg:text-2xl">
                 Partnered with leaders in the market of Vacation Homes Rental
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
-            <figure className="relative gap-5 md:flex  h-[400px]">
+          <div
+            className="flex justify-around items-start 
+          lg:justify-start lg:gap-x-10 lg:py-10 lg:px-16
+           rounded-lg bg-[#eee] p-4"
+          >
+            <figure
+              data-aos="fade-right"
+              className="relative h-[100px] min-w-[125px] max-w-[125px]
+            sm:h-[380px] sm:min-w-[540px] sm:max-w-[540px] 
+            xl:h-[400px] xl:min-w-[600px] xl:max-w-[600px]"
+            >
               <Image
                 src={whyUs3}
                 alt="street"
-                className="object-cover rounded-xl"
+                fill
+                className="object-cover rounded-lg max-w-[100%]"
               />
             </figure>
-            <div className="px-12 py-4">
-              <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
+            <div className="divider divider-horizontal"></div>
+            <div data-aos="fade-left">
+              <h3 className="main-color my-2  text-[.6875rem]  lg:text-5xl lg:mb-6">
                 Stress Free
-              </h1>
-              <p className="text-4xl text-[#1D1D1B]">
+              </h3>
+              <p className=" text-[#1D1D1B] text-[.5625rem] lg:text-2xl">
                 Taking care of everything from managing all the properties to
                 handling guests
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10 rounded-2xl bg-[#eee] p-10">
-            <figure className="relative gap-5 md:flex  h-[400px]">
+          <div
+            className="flex justify-around items-start 
+          lg:justify-start lg:gap-x-10 lg:py-10 lg:px-16
+           rounded-lg bg-[#eee] p-4"
+          >
+            <figure
+              data-aos="fade-right"
+              className="relative h-[100px] min-w-[125px] max-w-[125px] 
+            sm:h-[380px] sm:min-w-[540px] sm:max-w-[540px] 
+            xl:h-[400px] xl:min-w-[600px] xl:max-w-[600px]"
+            >
               <Image
                 src={whyUs4}
                 alt="street"
-                className="object-cover rounded-xl"
+                fill
+                className="object-cover rounded-lg max-w-[100%]"
               />
             </figure>
-            <div className="px-12 py-4">
-              <h1 className="main-color mb-6 text-[45px] md:text-[50px]">
+            <div className="divider divider-horizontal"></div>
+            <div data-aos="fade-left">
+              <h3 className="main-color my-2  text-[.6875rem]  lg:text-5xl lg:mb-6">
                 Having Control
-              </h1>
-              <p className="text-4xl text-[#1D1D1B]">
+              </h3>
+              <p className=" text-[#1D1D1B] text-[.5625rem] lg:text-2xl">
                 Having control of your home on dates that you would like to
                 stay.
               </p>

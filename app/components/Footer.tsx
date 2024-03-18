@@ -3,46 +3,78 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
+import foot from "@/public/images/footer/footerLogo.svg";
+import Image from "next/image";
 const Footer = () => {
   return (
-    <footer className=" bg-[#3B543C] footer-clip-path">
-      <div className="md:flex container mx-auto justify-between pt-16 pb-10 px-6 bg-[#3B543C] text-base-content">
-        <aside className="mt-28 md:mt-20">
-          <h1 className="text-3xl font-medium mb-5">
-            <Link href={"/"}>
-              <img src={"/images/footer/footerLogo.svg"} className="pb-4" />
-            </Link>
-          </h1>
-          <p className="text-white text-2xl leading-10">
-            Prival Holiday Homes LLC Copyright © 2024 all rights reserved
-          </p>
-        </aside>
-        <div className="flex flex-col gap-y-7 mt-6">
-          <div className="flex gap-10">
+    <footer className=" bg-[#47664D] footer-clip-path pt-10 mt-10">
+      <div className="container mx-auto py-10 ">
+        <div className="sm:flex justify-end">
+          <div className="ml-32 sm:ml-0 flex gap-12 sm:gap-x-28 mb-5 ">
             <nav className="text-white">
-              <h6 className="text-2xl md:text-3xl mb-3">know more</h6>
-              <div className="flex flex-col text-xl">
-                <Link href={"/about-us"} className="link link-hover  mb-3 ">
+              <h4 className="mb-3 text-[.6rem] sm:text-xl lg:text-3xl whitespace-nowrap">
+                know more
+              </h4>
+              <div className="flex flex-col">
+                <Link
+                  href={"/about-us"}
+                  className="link link-hover mb-1 sm:text-lg lg:text-xl text-[.5rem] "
+                >
                   About us
                 </Link>
-                <Link href={"/host-with-us"} className="link link-hover  mb-3">
+                <Link
+                  href={"/host-with-us"}
+                  className="link link-hover  mb-1 sm:text-lg lg:text-xl text-[.5rem] "
+                >
                   Host with us
                 </Link>
-                <Link href={"/contact-us"} className="link link-hover mb-3 ">
+                <Link
+                  href={"/contact-us"}
+                  className="link link-hover mb-1 sm:text-lg lg:text-xl text-[.5rem] "
+                >
                   Contact
                 </Link>
               </div>
             </nav>
-            <nav className="text-white text-xl">
-              <h6 className="text-2xl md:text-3xl mb-3">Information</h6>
-              <p className="mb-3">Terms & Conditions</p>
-              <p className="mb-3 ">Privacy Policy</p>
+            <nav className="text-white">
+              <h4 className="mb-3 text-[.6rem] sm:text-xl lg:text-3xl whitespace-nowrap">
+                Information
+              </h4>
+              <p className="mb-1  text-[.5rem] sm:text-lg lg:text-xl whitespace-nowrap ">
+                Terms & Conditions
+              </p>
+              <p className="mb-1 text-[.5rem] sm:text-lg lg:text-xl whitespace-nowrap">
+                Privacy Policy
+              </p>
             </nav>
           </div>
-          <div className="container flex gap-3 justify-end">
-            <FaLinkedin size={45} color="white" />
-            <FaInstagram size={45} color="white" />
-            <FaXTwitter size={45} color="white" />
+        </div>
+        <div className="flex justify-between items-center">
+          <aside className="container ">
+            <Link href={"/"}>
+              <Image
+                src={foot}
+                alt="footer-img"
+                className="pb-4 w-12 sm:w-28"
+              />
+            </Link>
+            <p className="text-white text-[.4rem] sm:text-[.9rem] whitespace-nowrap w-[230px]">
+              Prival Holiday Homes LLC Copyright © 2024 all rights reserved
+            </p>
+          </aside>
+          <div className="container flex gap-3 justify-end sm:mr-8">
+            <FaXTwitter
+              color="#3f5640"
+              className="bg-[white] rounded-md w-[18px] h-[18px] sm:w-[35px] sm:h-[35px] sm:p-2 p-1"
+            />
+            <FaLinkedin
+              color="#3f5640"
+              className="bg-[white] rounded-md w-[18px] h-[18px] sm:w-[35px] sm:h-[35px] sm:p-2 p-1"
+            />
+            <FaInstagram
+              color="#3f5640"
+              className="bg-[white] rounded-md w-[18px] h-[18px] sm:w-[35px] sm:h-[35px] sm:p-2 p-1"
+            />
           </div>
         </div>
       </div>

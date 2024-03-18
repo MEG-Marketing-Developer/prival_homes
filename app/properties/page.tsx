@@ -11,15 +11,18 @@ import prop4 from "@/public/images/properties/prop4.png";
 const Properties = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto px-4 mt-10">
+      <div className="container mx-auto mt-10">
         <form
           className="font-blissful"
           onSubmit={(e) => {
             e.preventDefault();
           }}
         >
-          <div className="flex gap-2 md:gap-10 flex-wrap md:flex-nowrap justify-center">
-            <label className="input input-bordered flex items-center grow bg-[#ECECEA] ">
+          <div className="flex gap-4 md:gap-10  md:flex-nowrap lg:justify-between   -mx-[30px]">
+            <label
+              data-aos="zoom-in"
+              className="input input-bordered flex items-center text-xs flex-grow bg-[#ECECEA] "
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -34,28 +37,30 @@ const Properties = () => {
               </svg>
               <input
                 type="text"
-                className="grow ml-2 "
+                className="grow ml-2 w-[138px] lg:w-full md:text-lg"
                 placeholder="Enter The Location"
               />
             </label>
-            <div>
-              <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
+            <div data-aos="zoom-in" className="md:w-[250px] ">
+              <select className="select select-bordered w-full text-xs bg-[#ECECEA] md:text-lg ">
                 <option disabled selected>
                   Sort by: Price
                 </option>
                 <option>$100</option>
                 <option>$200</option>
               </select>
-              <div className="flex gap-5 items-center mt-5">
-                <span>Price</span>
-                <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
+              <div className="flex gap-2 items-center mt-5 text-xs">
+                <span className="absolute left-44 sm:relative md:text-lg sm:left-0">
+                  Price
+                </span>
+                <select className="select select-bordered w-20 text-xs md:w-full  md:text-lg bg-[#ECECEA]">
                   <option disabled selected>
                     Min
                   </option>
                   <option>$100</option>
                   <option>$200</option>
                 </select>
-                <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
+                <select className="select select-bordered  w-20 text-xs md:w-full md:text-lg bg-[#ECECEA]">
                   <option disabled selected>
                     Max
                   </option>
@@ -65,29 +70,32 @@ const Properties = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
-            <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
+          <div
+            data-aos="zoom-in"
+            className=" grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 lg:max-w-[1000px] xl:-mt-10 -mx-[30px]"
+          >
+            <select className="select select-bordered text-xs bg-[#ECECEA] md:text-lg ">
               <option disabled selected>
                 Property Type
               </option>
               <option>$100</option>
               <option>$200</option>
             </select>
-            <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
+            <select className="select select-bordere text-xs  bg-[#ECECEA] md:text-lg">
               <option disabled selected>
                 Location
               </option>
               <option>$100</option>
               <option>$200</option>
             </select>
-            <select className="select select-bordered w-full max-w-xs  bg-[#ECECEA]">
+            <select className="select select-bordere text-xs  bg-[#ECECEA] md:text-lg">
               <option disabled selected>
                 Rooms
               </option>
               <option>$100</option>
               <option>$200</option>
             </select>
-            <select className="select select-bordered w-full max-w-xs bg-[#ECECEA]">
+            <select className="select select-bordere text-xs bg-[#ECECEA] md:text-lg">
               <option disabled selected>
                 Bathroom
               </option>
@@ -97,135 +105,168 @@ const Properties = () => {
           </div>
         </form>
         <div>
-          <h1 className="main-color mt-20 mb-4 text-[45px] md:text-[55px]">
+          <h3 data-aos="fade-right" className="main-color mt-20 ">
             Properties
-          </h1>
-          <h2 className="mb-12 text-3xl md:text-2xl leading-10">
+          </h3>
+          <h4 data-aos="fade-right" className="mb-8 text-[.9rem] md:text-2xl">
             Showing 440 results search
-          </h2>
+          </h4>
         </div>
-        <div className="mx-10 lg:flex justify-start items-start gap-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 mb-20 gap-8 ">
-            <div className="card bg-base-100 shadow-xl w-[90%] ">
-              <figure className="h-[320px]">
-                <Image src={prop1} alt="properties" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title tracking-wider leading-7">
-                  Sky-High Living at The Palm Tower - St. Regis
-                </h2>
-                <div className="card-actions justify-between mt-2">
-                  <div className="badge bg-[#E6E6E6] py-5 px-3 rounded-lg ">
-                    <span>
-                      <MdBedroomParent className="main-color mr-2 text-3xl" />
-                    </span>
-                    <h2>1 bedroom</h2>
-                  </div>
-                  <div className="badge bg-[#E6E6E6] py-5 px-3 rounded-lg">
-                    <span>
-                      <MdBathroom className="main-color mr-2 text-3xl" />
-                    </span>
-                    <h2>1 bathroom</h2>
-                  </div>
-                </div>
-                <h1 className="tracking-widest text-2xl mt-2">
-                  AED 700.00 /Night
-                </h1>
-              </div>
-            </div>
-            <div className="card bg-base-100 shadow-xl w-[90%]">
-              <figure className="h-[320px]">
-                <Image src={prop2} alt="properties" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title tracking-wider leading-7">
-                  The Address in Dubai Mall
-                </h2>
-                <div className="card-actions justify-between mt-2">
-                  <div className="badge bg-[#E6E6E6] py-5 px-3 rounded-lg ">
-                    <span>
-                      <MdBedroomParent className="main-color mr-2 text-3xl" />
-                    </span>
-                    <h2>1 bedroom</h2>
-                  </div>
-                  <div className="badge bg-[#E6E6E6] py-5 px-3 rounded-lg">
-                    <span>
-                      <MdBathroom className="main-color mr-2 text-3xl" />
-                    </span>
-                    <h2>1 bathroom</h2>
-                  </div>
-                </div>
-                <h1 className="tracking-widest text-2xl mt-2">
-                  AED 4,200.00 /Night
-                </h1>
-              </div>
-            </div>
-            <div className="card bg-base-100 shadow-xl w-[90%] ">
-              <figure className="h-[320px]">
-                <Image src={prop3} alt="properties" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title tracking-wider leading-7">
-                  Sky-High Living at The Palm Tower - St. Regis
-                </h2>
-                <div className="card-actions justify-between mt-2">
-                  <div className="badge bg-[#E6E6E6] py-5 px-3 rounded-lg ">
-                    <span>
-                      <MdBedroomParent className="main-color mr-2 text-3xl" />
-                    </span>
-                    <h2>1 bedroom</h2>
-                  </div>
-                  <div className="badge bg-[#E6E6E6] py-5 px-3 rounded-lg">
-                    <span>
-                      <MdBathroom className="main-color mr-2 text-3xl" />
-                    </span>
-                    <h2>1 bathroom</h2>
-                  </div>
-                </div>
-                <h1 className="tracking-widest text-2xl mt-2">
-                  AED 900.00 /Night
-                </h1>
-              </div>
-            </div>
-            <div className="card bg-base-100 shadow-xl w-[90%]">
-              <figure className="h-[320px]">
-                <Image src={prop4} alt="properties" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title tracking-wider leading-7">
-                  Sky-High Living at The Palm Tower - St. Regis
-                </h2>
-                <div className="card-actions justify-between mt-2">
-                  <div className="badge bg-[#E6E6E6] py-5 px-3 rounded-lg ">
-                    <span>
-                      <MdBedroomParent className="main-color mr-2 text-3xl" />
-                    </span>
-                    <h2>1 bedroom</h2>
-                  </div>
-                  <div className="badge bg-[#E6E6E6] py-5 px-3 rounded-lg">
-                    <span>
-                      <MdBathroom className="main-color mr-2 text-3xl" />
-                    </span>
-                    <h2>1 bathroom</h2>
-                  </div>
-                </div>
-                <h1 className="tracking-widest text-2xl mt-2">
-                  AED 6,200.00 /Night
-                </h1>
-              </div>
-            </div>
-
-            <div className="btn max-w-[420px]">Learn more</div>
-          </div>
-          <div className="relative h-[1200px] mb-8 w-full">
+        <div className=" lg:flex justify-start items-start gap-10  -mx-[30px]">
+          <div
+            data-aos="fade-up"
+            className="relative h-[600px] mb-8 w-full lg:h-[1100px] md:w-3/4 md:mx-auto lg:w-[45%] order-2"
+          >
             <Image
               src={map}
               alt="map"
               fill
               priority
               quality={100}
-              className="rounded-xl object-cover "
+              className="rounded-3xl object-cover "
             />
+          </div>
+          <div className="grid grid-cols-2 mb-10 gap-4 md:justify-items-center lg:gap-8 order-1 md:w-3/4 md:mx-auto">
+            <div
+              data-aos="fade-up"
+              className="card  bg-base-100 shadow-xl max-w-[25rem] "
+            >
+              <figure className="h-[180px] lg:h-[300px]">
+                <Image src={prop1} alt="properties" />
+              </figure>
+              <div className="px-4 py-4">
+                <h4 className="text-[.5rem] lg:text-lg">
+                  Sky-High Living at The Palm Tower - St. Regis
+                </h4>
+                <div className="flex gap-2 mt-4">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm ">
+                    <span>
+                      <MdBedroomParent className="main-color mr-1 md:ml-2 " />
+                    </span>
+                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                      1 bedroom
+                    </span>
+                  </div>
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm">
+                    <span>
+                      <MdBathroom className="main-color mr-1 md:ml-2 " />
+                    </span>
+                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                      1 bathroom
+                    </span>
+                  </div>
+                </div>
+                <h4 className=" mt-5 text-xs lg:text-lg">AED 700.00 /Night</h4>
+              </div>
+            </div>
+            <div
+              data-aos="fade-up"
+              className="card bg-base-100 shadow-xl max-w-[25rem] "
+            >
+              <figure className="h-[180px] lg:h-[300px]">
+                <Image src={prop2} alt="properties" />
+              </figure>
+              <div className="px-4 py-4">
+                <h4 className="text-[.5rem] lg:text-lg">
+                  The Address in Dubai Mall
+                </h4>
+                <div className="flex gap-2 mt-4">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm ">
+                    <span>
+                      <MdBedroomParent className="main-color mr-1 md:ml-2 " />
+                    </span>
+                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                      1 bedroom
+                    </span>
+                  </div>
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm">
+                    <span>
+                      <MdBathroom className="main-color mr-1 md:ml-2 " />
+                    </span>
+                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                      1 bathroom
+                    </span>
+                  </div>
+                </div>
+                <h4 className=" mt-5 text-xs lg:text-lg">
+                  AED 4,200.00 /Night
+                </h4>
+              </div>
+            </div>
+            <div
+              data-aos="fade-up"
+              className="card bg-base-100 shadow-xl max-w-[25rem] "
+            >
+              <figure className="h-[180px] lg:h-[300px]">
+                <Image src={prop3} alt="properties" />
+              </figure>
+              <div className="px-4 py-4">
+                <h4 className="text-[.5rem] lg:text-lg">
+                  Sky-High Living at The Palm Tower - St. Regis
+                </h4>
+                <div className="flex gap-2 mt-4">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm ">
+                    <span>
+                      <MdBedroomParent className="main-color mr-1 md:ml-2 " />
+                    </span>
+                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                      1 bedroom
+                    </span>
+                  </div>
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm">
+                    <span>
+                      <MdBathroom className="main-color mr-1 md:ml-2 " />
+                    </span>
+                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                      1 bathroom
+                    </span>
+                  </div>
+                </div>
+                <h4 className=" mt-5 text-xs lg:text-lg">AED 900.00 /Night</h4>
+              </div>
+            </div>
+            <div
+              data-aos="fade-up"
+              className="card bg-base-100 shadow-xl max-w-[25rem] "
+            >
+              <figure className="h-[180px] lg:h-[300px]">
+                <Image src={prop4} alt="properties" />
+              </figure>
+              <div className="px-4 py-4">
+                <h4 className="text-[.5rem] lg:text-lg">
+                  Sky-High Living at The Palm Tower - St. Regis
+                </h4>
+                <div className="flex gap-2 mt-4">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start  w-full items-center p-2 rounded-sm ">
+                    <span>
+                      <MdBedroomParent className="main-color mr-1 md:ml-2" />
+                    </span>
+                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                      1 bedroom
+                    </span>
+                  </div>
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start  w-full items-center p-2 rounded-sm">
+                    <span>
+                      <MdBathroom className="main-color mr-1 md:ml-2 " />
+                    </span>
+                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                      1 bathroom
+                    </span>
+                  </div>
+                </div>
+                <h4 className=" mt-5 text-xs lg:text-lg">
+                  AED 6,200.00 /Night
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center lg:justify-start items-center lg:ml-32 xl:ml-52 2xl:ml-72 lg:-mt-16 ">
+          <div
+            data-aos="fade-up"
+            className="btn w-[200px] lg:w-[300px] lg:text-xl"
+          >
+            Learn more
           </div>
         </div>
       </div>

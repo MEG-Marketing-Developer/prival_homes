@@ -2,7 +2,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import "./globals.css";
 import type { Metadata } from "next";
-
+import { AOSInit } from "./aos";
 export const metadata: Metadata = {
   title: "Prival Homes",
   description: "Booking Now",
@@ -15,6 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="m-auto">
+      <AOSInit />
       <body>
         <NavBar />
         <main>{children}</main>

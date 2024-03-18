@@ -6,9 +6,12 @@ const ContactUs = () => {
   return (
     <div className="bg-white">
       <div className="container mx-auto my-10">
-        <h1 className="main-color mt-20 px-4 mb-4 text-[45px] md:text-[55px]">
+        <h2
+          data-aos="fade-up"
+          className="main-color mt-20 px-4 mb-4 text-[45px] md:text-[55px]"
+        >
           Contact Us
-        </h1>
+        </h2>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -16,40 +19,50 @@ const ContactUs = () => {
         >
           <div className="flex flex-wrap gap-x-7 justify-center w-full gap-y-5 mb-6">
             <input
+              data-aos="fade-right"
               type="text"
               placeholder="First Name"
               className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
+              data-aos="fade-left"
               type="text"
               placeholder="Last Name"
               className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
+              data-aos="fade-right"
               type="text"
               placeholder="Email"
               className="input input-bordered w-full md:max-w-[48%]"
             />
             <input
+              data-aos="fade-left"
               type="text"
               placeholder="Contact No"
               className="input input-bordered w-full md:max-w-[48%]"
             />
           </div>
-          <div>
+          <div data-aos="fade-down" className="sm:mx-3">
             <textarea
-              className="textarea textarea-bordered w-full min-h-[250px] "
+              className="textarea textarea-bordered w-full min-h-[250px]  "
               placeholder="Message"
             ></textarea>
           </div>
-          <div className="my-5">
-            <button className="btn rounded-full main-color-bg px-20 py-5 uppercase text-white">
+          <div
+            data-aos="zoom-out"
+            className="my-5 sm:ml-4 flex justify-center items-center sm:block"
+          >
+            <button className="btn  rounded-full main-color-bg px-20 py-5 uppercase text-white">
               Submit
             </button>
           </div>
         </form>
 
-        <footer className="rounded-lg my-20 sm:flex p-10 bg-[#F1F1F1] justify-between">
+        <footer
+          data-aos="fade-up"
+          className="rounded-lg my-20 sm:flex p-10 bg-[#F1F1F1] justify-between"
+        >
           <div>
             <nav className="mb-4">
               <h6 className="footer-title main-color">Prival Offices</h6>
