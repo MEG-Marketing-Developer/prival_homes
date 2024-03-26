@@ -10,6 +10,7 @@ import hosting6 from "@/public/images/home/hosting6.svg";
 import hosting7 from "@/public/images/home/hosting7.svg";
 import hosting8 from "@/public/images/home/rms.svg";
 import Image from "next/image";
+
 const data = [
   { img1: hosting1, img2: hosting2 },
   { img1: hosting3, img2: hosting4 },

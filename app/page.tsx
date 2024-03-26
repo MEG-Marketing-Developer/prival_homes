@@ -1,25 +1,40 @@
 import Link from "next/link";
 import Image from "next/image";
-import hero from "@/public/images/home/hero.jpg";
+import hero from "@/public/images/home/hero.png";
 import location from "@/public/images/home/location.svg";
 import interior from "@/public/images/home/interior.svg";
 import facilities from "@/public/images/home/facilities.svg";
 import services from "@/public/images/home/services.svg";
-import downtown from "@/public/images/home/home1.png";
-import golf from "@/public/images/home/home2.png";
-import palm from "@/public/images/home/home3.png";
+import downtown from "@/public/images/home/home 1.png";
+import golf from "@/public/images/home/home 2.png";
+import palm from "@/public/images/home/home 3.png";
 import bedRoom from "@/public/images/home/bed-room.png";
-import hosting1 from "@/public/images/hosting/hosting1.svg";
-import hosting2 from "@/public/images/hosting/hosting2.svg";
-import hosting3 from "@/public/images/hosting/hosting3.svg";
-import hosting4 from "@/public/images/hosting/hosting4.svg";
-import Slider from "./components/Slider";
+
+import hosting11 from "@/public/images/hosting/hosting1.svg";
+import hosting22 from "@/public/images/hosting/hosting2.svg";
+import hosting33 from "@/public/images/hosting/hosting3.svg";
+import hosting44 from "@/public/images/hosting/hosting4.svg";
+
+import hosting1 from "@/public/images/home/hosting1.svg";
+import hosting2 from "@/public/images/home/hosting2.svg";
+import hosting3 from "@/public/images/home/hosting3.svg";
+import hosting4 from "@/public/images/home/hosting4.svg";
+import hosting5 from "@/public/images/home/hosting5.svg";
+import hosting6 from "@/public/images/home/hosting6.svg";
+import hosting7 from "@/public/images/home/hosting7.svg";
+import hosting8 from "@/public/images/home/rms.svg";
+
+import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 export default function Home() {
-  const data = [
+  const items = [
     { image: hosting1 },
     { image: hosting2 },
     { image: hosting3 },
     { image: hosting4 },
+    { image: hosting5 },
+    { image: hosting6 },
+    { image: hosting7 },
+    { image: hosting8 },
   ];
   return (
     <>
@@ -184,7 +199,7 @@ export default function Home() {
                 className="py-5 flex flex-col justify-center items-center gap-4"
               >
                 <Image
-                  src={hosting1}
+                  src={hosting11}
                   alt="hosting"
                   className="w-[3.125rem] lg:w-[5.375rem]"
                 />
@@ -195,7 +210,7 @@ export default function Home() {
                 className="py-5 flex flex-col justify-center items-center gap-4"
               >
                 <Image
-                  src={hosting4}
+                  src={hosting44}
                   alt="hosting"
                   className="w-[3.125rem] lg:w-[5.375rem]"
                 />
@@ -206,7 +221,7 @@ export default function Home() {
                 className="py-5 flex flex-col justify-center items-center gap-4 md:self-start"
               >
                 <Image
-                  src={hosting2}
+                  src={hosting22}
                   alt="hosting"
                   className="w-[3.125rem] lg:w-[5.375rem]"
                 />
@@ -219,7 +234,7 @@ export default function Home() {
                 className="py-5 flex flex-col justify-center items-center gap-4 md:self-start"
               >
                 <Image
-                  src={hosting3}
+                  src={hosting33}
                   alt="hosting"
                   className="w-[3.125rem] lg:w-[5.375rem]"
                 />
@@ -233,12 +248,18 @@ export default function Home() {
       </div>
       <div className="bg-[#DDDDDD]  clip-path-top -mb-36">
         <div className="container mx-auto py-40 ">
-          <h2 data-aos="fade-down" className="main-color text-lg md:text-3xl">
+          <h2
+            data-aos="fade-down"
+            className="main-color text-lg md:text-3xl mb-10"
+          >
             Our Hosting Platforms
           </h2>
-          <Slider />
+          <div className="h-[10rem] rounded-md flex flex-col antialiased bg-[#DDDDDD]  items-center justify-center relative overflow-hidden">
+            <InfiniteMovingCards items={items} direction="right" speed="slow" />
+          </div>
         </div>
       </div>
     </>
   );
 }
+//dark:bg-black dark:bg-grid-white/[0.05]

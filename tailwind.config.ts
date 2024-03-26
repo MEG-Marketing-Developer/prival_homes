@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss";
 const defaultTheme = require('tailwindcss/defaultTheme');
-
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config: Config = {
   content: [
@@ -23,6 +26,17 @@ const config: Config = {
       ],
     },
     extend: {
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
       fontSize:{
           'body-2xl':'1.75rem',
           'body-xl':'1.5625rem',
@@ -50,22 +64,22 @@ const config: Config = {
         'widescreen': { 'raw': '(min-aspect-ratio: 3/2)' },
         'tallscreen': { 'raw': '(min-aspect-ratio: 13/20)' },
       },
-      keyframes: {
-        'open-menu': {
-          '0%': { transform: 'scaleY(0)' },
-          '80%': { transform: 'scaleY(1.2)' },
-          '100%': { transform: 'scaleY(1)' },
-        },
-      },
-      animation: {
-        'open-menu': 'open-menu 0.5s ease-in-out forwards',
-      }
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [addVariablesForColors,require("daisyui")],
   daisyui: {
     darkTheme:"light",
     base: false,
   },
 };
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
 export default config;

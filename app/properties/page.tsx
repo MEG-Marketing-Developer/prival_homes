@@ -50,7 +50,7 @@ const Properties = () => {
                 <option>$200</option>
               </select>
               <div className="flex gap-2 items-center mt-5 text-xs">
-                <span className="absolute left-44 sm:relative md:text-lg sm:left-0">
+                <span className="absolute -left-10 sm:relative md:text-lg sm:left-0">
                   Price
                 </span>
                 <select className="select select-bordered w-20 text-xs md:w-full  md:text-lg bg-[#ECECEA]">
