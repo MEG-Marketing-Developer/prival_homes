@@ -84,7 +84,7 @@ const ContactUs = () => {
             </div>
             <div>
               <span className="main-color font-blissful">Contact us : </span>
-              <span className="ml-1">+971 52 683 3344</span>
+              <span className="ml-1">+97145750248</span>
             </div>
           </div>
         </footer>

@@ -18,10 +18,10 @@ const Properties = () => {
             e.preventDefault();
           }}
         >
-          <div className="flex gap-4 md:gap-10  md:flex-nowrap lg:justify-between   -mx-[30px]">
+          <div className="flex gap-4 md:gap-10  md:flex-nowrap lg:justify-between -mx-[10px] sm:mx-0">
             <label
               data-aos="zoom-in"
-              className="input input-bordered flex items-center text-xs flex-grow bg-[#ECECEA] "
+              className="input input-bordered  flex items-center text-xs flex-grow bg-[#ECECEA] "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,11 +37,11 @@ const Properties = () => {
               </svg>
               <input
                 type="text"
-                className="grow ml-2 w-[138px] lg:w-full md:text-lg"
+                className="grow ml-2 w-[90px] lg:w-full md:text-lg"
                 placeholder="Enter The Location"
               />
             </label>
-            <div data-aos="zoom-in" className="md:w-[250px] ">
+            <div data-aos="zoom-in" className=" md:w-[250px] ">
               <select className="select select-bordered w-full text-xs bg-[#ECECEA] md:text-lg ">
                 <option disabled selected>
                   Sort by: Price
@@ -72,7 +72,7 @@ const Properties = () => {
           </div>
           <div
             data-aos="zoom-in"
-            className=" grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 lg:max-w-[1000px] xl:-mt-10 -mx-[30px]"
+            className=" grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 lg:max-w-[1000px] xl:-mt-10 -mx-[10px] sm:mx-0"
           >
             <select className="select select-bordered text-xs bg-[#ECECEA] md:text-lg ">
               <option disabled selected>
@@ -112,7 +112,7 @@ const Properties = () => {
             Showing 440 results search
           </h4>
         </div>
-        <div className=" lg:flex justify-start items-start gap-10  -mx-[30px]">
+        <div className=" lg:flex justify-start items-start gap-10  -mx-[10px] sm:mx-0">
           <div
             data-aos="fade-up"
             className="relative h-[600px] mb-8 w-full lg:h-[1100px] md:w-3/4 md:mx-auto lg:w-[45%] order-2"
@@ -134,24 +134,24 @@ const Properties = () => {
               <figure className="h-[180px] lg:h-[300px]">
                 <Image src={prop1} alt="properties" />
               </figure>
-              <div className="px-4 py-4">
+              <div className="px-3 py-4">
                 <h4 className="text-[.5rem] lg:text-lg">
                   Sky-High Living at The Palm Tower - St. Regis
                 </h4>
                 <div className="flex gap-2 mt-4">
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm ">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm ">
                     <span>
                       <MdBedroomParent className="main-color mr-1 md:ml-2 " />
                     </span>
-                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bedroom
                     </span>
                   </div>
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm">
                     <span>
                       <MdBathroom className="main-color mr-1 md:ml-2 " />
                     </span>
-                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bathroom
                     </span>
                   </div>
@@ -166,24 +166,24 @@ const Properties = () => {
               <figure className="h-[180px] lg:h-[300px]">
                 <Image src={prop2} alt="properties" />
               </figure>
-              <div className="px-4 py-4">
+              <div className="px-3 py-4">
                 <h4 className="text-[.5rem] lg:text-lg">
                   The Address in Dubai Mall
                 </h4>
                 <div className="flex gap-2 mt-4">
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm ">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center  p-[.1875rem] sm:p-2 rounded-sm ">
                     <span>
                       <MdBedroomParent className="main-color mr-1 md:ml-2 " />
                     </span>
-                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bedroom
                     </span>
                   </div>
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center  p-[.1875rem] sm:p-2 rounded-sm">
                     <span>
                       <MdBathroom className="main-color mr-1 md:ml-2 " />
                     </span>
-                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bathroom
                     </span>
                   </div>
@@ -200,24 +200,24 @@ const Properties = () => {
               <figure className="h-[180px] lg:h-[300px]">
                 <Image src={prop3} alt="properties" />
               </figure>
-              <div className="px-4 py-4">
+              <div className="px-3 py-4">
                 <h4 className="text-[.5rem] lg:text-lg">
                   Sky-High Living at The Palm Tower - St. Regis
                 </h4>
                 <div className="flex gap-2 mt-4">
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm ">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm ">
                     <span>
                       <MdBedroomParent className="main-color mr-1 md:ml-2 " />
                     </span>
-                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bedroom
                     </span>
                   </div>
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-2 rounded-sm">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm">
                     <span>
                       <MdBathroom className="main-color mr-1 md:ml-2 " />
                     </span>
-                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bathroom
                     </span>
                   </div>
@@ -232,24 +232,24 @@ const Properties = () => {
               <figure className="h-[180px] lg:h-[300px]">
                 <Image src={prop4} alt="properties" />
               </figure>
-              <div className="px-4 py-4">
+              <div className="px-3 py-4">
                 <h4 className="text-[.5rem] lg:text-lg">
                   Sky-High Living at The Palm Tower - St. Regis
                 </h4>
                 <div className="flex gap-2 mt-4">
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start  w-full items-center p-2 rounded-sm ">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start  w-full items-center p-[.1875rem] sm:p-2 rounded-sm ">
                     <span>
                       <MdBedroomParent className="main-color mr-1 md:ml-2" />
                     </span>
-                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bedroom
                     </span>
                   </div>
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start  w-full items-center p-2 rounded-sm">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start  w-full items-center p-[.1875rem] sm:p-2 rounded-sm">
                     <span>
                       <MdBathroom className="main-color mr-1 md:ml-2 " />
                     </span>
-                    <span className="text-[.4rem] lg:text-xs whitespace-nowrap">
+                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bathroom
                     </span>
                   </div>
