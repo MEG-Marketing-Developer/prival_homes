@@ -265,7 +265,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#DDDDDD]  clip-path-top -mb-36">
+      <div className="bg-[#DDDDDD]  clip-path-top -mb-36 ">
         <div className="container mx-auto pt-20 ">
           <h2
             data-aos="fade-down"
@@ -273,18 +273,55 @@ export default function Home() {
           >
             Our Coalition
           </h2>
-          <div className="h-[10rem] rounded-md flex flex-col antialiased bg-[#DDDDDD]  items-center justify-center relative overflow-hidden">
-            <InfiniteMovingCards
-              items={items_2}
-              direction="right"
-              speed="slow"
-            />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 mb-10">
+            <div data-aos="zoom-in" className="relative w-24 md:w-48 ">
+              <Image
+                src={hosting_1}
+                alt="hosting_platforms"
+                className="object-cover "
+              />
+            </div>
+            <div data-aos="zoom-in" className="relative w-24 md:w-48">
+              <Image
+                src={hosting_2}
+                alt="hosting_platforms"
+                className="object-cover"
+              />
+            </div>
+            <div data-aos="zoom-in" className="relative w-24 md:w-48 ">
+              <Image
+                src={hosting_3}
+                alt="hosting_platforms"
+                className="object-cover"
+              />
+            </div>
+            <div data-aos="zoom-in" className="relative w-24 md:w-48">
+              <Image
+                src={hosting_4}
+                alt="hosting_platforms"
+                className="object-cover"
+              />
+            </div>
+            <div data-aos="zoom-in" className="relative w-24 md:w-48">
+              <Image
+                src={hosting_5}
+                alt="hosting_platforms"
+                className="object-cover md:w-40"
+              />
+            </div>
+            <div data-aos="zoom-in" className="relative w-24 md:w-48">
+              <Image
+                src={hosting_6}
+                alt="hosting_platforms"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
-        <div className="container mx-auto pb-20 pt-10 sm:pt-28">
+        <div className="container mx-auto pb-28 pt-10 sm:pt-20">
           <h2
             data-aos="fade-down"
-            className="main-color text-lg md:text-3xl mb-10"
+            className="main-color text-lg md:text-3xl mb-5 "
           >
             Our OTA Partners
           </h2>
