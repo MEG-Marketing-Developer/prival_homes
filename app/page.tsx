@@ -15,18 +15,27 @@ import hosting22 from "@/public/images/hosting/hosting2.svg";
 import hosting33 from "@/public/images/hosting/hosting3.svg";
 import hosting44 from "@/public/images/hosting/hosting4.svg";
 
-import hosting1 from "@/public/images/home/hosting1.svg";
-import hosting2 from "@/public/images/home/hosting2.svg";
-import hosting3 from "@/public/images/home/hosting3.svg";
-import hosting4 from "@/public/images/home/hosting4.svg";
-import hosting5 from "@/public/images/home/hosting5.svg";
-import hosting6 from "@/public/images/home/hosting6.svg";
-import hosting7 from "@/public/images/home/hosting7.svg";
-import hosting8 from "@/public/images/home/rms.svg";
+import hosting2 from "@/public/images/home/our-ota-partners/PropertyFinder.svg";
+import hosting1 from "@/public/images/home/our-ota-partners/RMS.svg";
+import hosting3 from "@/public/images/home/our-ota-partners/Tripadvisor.svg";
+import hosting4 from "@/public/images/home/our-ota-partners/agoda.svg";
+import hosting5 from "@/public/images/home/our-ota-partners/airbnb.svg";
+import hosting6 from "@/public/images/home/our-ota-partners/bayut.svg";
+import hosting7 from "@/public/images/home/our-ota-partners/booking.svg";
+import hosting8 from "@/public/images/home/our-ota-partners/dubizzle.svg";
+import hosting9 from "@/public/images/home/our-ota-partners/expedia.svg";
+import hosting10 from "@/public/images/home/our-ota-partners/hotels.svg";
+
+import hosting_1 from "@/public/images/home/our-coalition/FireLec.svg";
+import hosting_2 from "@/public/images/home/our-coalition/Hirz.svg";
+import hosting_3 from "@/public/images/home/our-coalition/Overseas.svg";
+import hosting_4 from "@/public/images/home/our-coalition/SIS.svg";
+import hosting_5 from "@/public/images/home/our-coalition/SK.svg";
+import hosting_6 from "@/public/images/home/our-coalition/SSS.svg";
 
 import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 export default function Home() {
-  const items = [
+  const items_1 = [
     { image: hosting1 },
     { image: hosting2 },
     { image: hosting3 },
@@ -35,6 +44,16 @@ export default function Home() {
     { image: hosting6 },
     { image: hosting7 },
     { image: hosting8 },
+    { image: hosting9 },
+    { image: hosting10 },
+  ];
+  const items_2 = [
+    { image: hosting_1 },
+    { image: hosting_2 },
+    { image: hosting_3 },
+    { image: hosting_4 },
+    { image: hosting_5 },
+    { image: hosting_6 },
   ];
   return (
     <>
@@ -247,15 +266,34 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-[#DDDDDD]  clip-path-top -mb-36">
-        <div className="container mx-auto py-40 ">
+        <div className="container mx-auto pt-20 ">
           <h2
             data-aos="fade-down"
             className="main-color text-lg md:text-3xl mb-10"
           >
-            Our Hosting Platforms
+            Our Coalition
           </h2>
           <div className="h-[10rem] rounded-md flex flex-col antialiased bg-[#DDDDDD]  items-center justify-center relative overflow-hidden">
-            <InfiniteMovingCards items={items} direction="right" speed="slow" />
+            <InfiniteMovingCards
+              items={items_2}
+              direction="right"
+              speed="slow"
+            />
+          </div>
+        </div>
+        <div className="container mx-auto pb-20 pt-10 sm:pt-28">
+          <h2
+            data-aos="fade-down"
+            className="main-color text-lg md:text-3xl mb-10"
+          >
+            Our OTA Partners
+          </h2>
+          <div className="h-[10rem] rounded-md flex flex-col antialiased bg-[#DDDDDD]  items-center justify-center relative overflow-hidden">
+            <InfiniteMovingCards
+              items={items_1}
+              direction="right"
+              speed="slow"
+            />
           </div>
         </div>
       </div>

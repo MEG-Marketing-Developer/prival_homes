@@ -21,7 +21,7 @@ const NavBar = () => {
       <div className="absolute bg-white w-[100%] navBar-clip-path -bottom-1 h-[6.25rem] "></div>
       <div className="sticky top-0 z-10  text-white  ">
         <section
-          className={`container mx-auto flex items-center  pb-3 pt-10 px-6 ${
+          className={`container mx-auto flex items-center  pb-3 pt-10  sm:px-6 ${
             isMobileMenuOpen ? "justify-end" : "justify-between"
           }`}
         >
