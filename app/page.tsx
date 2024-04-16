@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import hero from "@/public/images/home/hero.png";
+import hero from "@/public/images/home/hero.svg";
 import location from "@/public/images/home/location.svg";
 import interior from "@/public/images/home/interior.svg";
 import facilities from "@/public/images/home/facilities.svg";
 import services from "@/public/images/home/services.svg";
-import downtown from "@/public/images/home/home 1.png";
-import golf from "@/public/images/home/home 2.png";
-import palm from "@/public/images/home/home 3.png";
-import bedRoom from "@/public/images/home/bed-room.png";
+import downtown from "@/public/images/home/home 1.svg";
+import golf from "@/public/images/home/home 2.svg";
+import palm from "@/public/images/home/home 3.svg";
+import bedRoom from "@/public/images/home/bed-room.svg";
 
 import hosting11 from "@/public/images/hosting/hosting1.svg";
 import hosting22 from "@/public/images/hosting/hosting2.svg";

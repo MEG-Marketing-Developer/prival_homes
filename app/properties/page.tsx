@@ -3,11 +3,11 @@ import Image from "next/image";
 import React from "react";
 import { MdBathroom } from "react-icons/md";
 import { MdBedroomParent } from "react-icons/md";
-import map from "@/public/images/properties/map.png";
-import prop1 from "@/public/images/properties/prop1.png";
-import prop2 from "@/public/images/properties/prop2.png";
-import prop3 from "@/public/images/properties/prop3.png";
-import prop4 from "@/public/images/properties/prop4.png";
+import map from "@/public/images/properties/map.svg";
+import prop1 from "@/public/images/properties/prop1.svg";
+import prop2 from "@/public/images/properties/prop2.svg";
+import prop3 from "@/public/images/properties/prop3.svg";
+import prop4 from "@/public/images/properties/prop4.svg";
 const Properties = () => {
   return (
     <div className="bg-white">

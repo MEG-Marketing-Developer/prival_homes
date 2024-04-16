@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import whyUs1 from "@/public/images/whyUs/whyUs1.jpg";
-import whyUs2 from "@/public/images/whyUs/whyUs2.jpg";
-import whyUs3 from "@/public/images/whyUs/whyUs3.jpg";
-import whyUs4 from "@/public/images/whyUs/whyUs4.jpg";
+import whyUs1 from "@/public/images/whyUs/whyUs1.svg";
+import whyUs2 from "@/public/images/whyUs/whyUs2.svg";
+import whyUs3 from "@/public/images/whyUs/whyUs3.svg";
+import whyUs4 from "@/public/images/whyUs/whyUs4.svg";
 const WhyUs = () => {
   return (
     <div className="bg-white">

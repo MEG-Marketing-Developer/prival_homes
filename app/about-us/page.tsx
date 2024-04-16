@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "@/public/images/aboutUs/about-us.png";
+import aboutImg from "@/public/images/aboutUs/about-us.svg";
 import Image from "next/image";
 const AboutUs = () => {
   return (
