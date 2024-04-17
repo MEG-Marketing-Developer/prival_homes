@@ -7,7 +7,7 @@ import foot from "@/public/images/footer/footerLogo.svg";
 import Image from "next/image";
 const Footer = () => {
   return (
-    <footer className=" bg-[#47664D] footer-clip-path pt-10 mt-10">
+    <footer className=" bg-[#47664D] footer-clip-path pt-10 mt-10 sm:px-8">
       <div className="container mx-auto py-10 ">
         <div className="sm:flex justify-end">
           <div className="ml-32 sm:ml-0 flex gap-12 sm:gap-x-28 mb-5 ">
@@ -40,12 +40,20 @@ const Footer = () => {
               <h4 className="mb-3 text-[.6rem] sm:text-xl lg:text-3xl whitespace-nowrap">
                 Information
               </h4>
-              <p className="mb-1  text-[.5rem] sm:text-lg lg:text-xl whitespace-nowrap ">
-                Terms & Conditions
-              </p>
-              <p className="mb-1 text-[.5rem] sm:text-lg lg:text-xl whitespace-nowrap">
-                Privacy Policy
-              </p>
+              <div className="flex flex-col">
+                <Link
+                  href={"/conditions"}
+                  className="link link-hover mb-1 sm:text-lg lg:text-xl text-[.5rem] "
+                >
+                  Terms & Conditions
+                </Link>
+                <Link
+                  href={"/privacypolicy"}
+                  className="link link-hover mb-1 sm:text-lg lg:text-xl text-[.5rem] "
+                >
+                  Privacy Policy
+                </Link>
+              </div>
             </nav>
           </div>
         </div>

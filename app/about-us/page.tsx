@@ -3,7 +3,7 @@ import aboutImg from "@/public/images/aboutUs/about-us.svg";
 import Image from "next/image";
 const AboutUs = () => {
   return (
-    <div className="bg-white mb-40">
+    <div className="bg-white mb-40 sm:px-8">
       <div className="container mx-auto">
         <h3 className="main-color mt-20  mb-4 ">About Us</h3>
         <p className="mb-6 text-gray-500 sm:text-[#161615]">

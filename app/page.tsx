@@ -69,7 +69,6 @@ export default function Home() {
           priority
           className="object-cover -z-10 hero-clip-path "
         />
-        <div className="hero-overlay hero-clip-path hero-overlay-gradient"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-4xl">
             <h1 data-aos="zoom-in" className="mb-12">
@@ -89,7 +88,7 @@ export default function Home() {
       </div>
       <div className=" min-h-min py-9">
         <div className="container mx-auto ">
-          <div data-aos="fade-right">
+          <div data-aos="fade-right"  className="sm:pl-10">
             <h2 className="main-color mt-10 mb-5">Be our guest</h2>
             <p className="mb-10 text-gray-500 sm:text-[#161615]">
               Welcome to Prival Homes in Dubai! Enjoy stunning views, modern
@@ -175,7 +174,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pb-2 pt-5 -mt-20 md:mt-0 clip-our-location-top bg-white ">
+      <div className="pb-2 pt-5 -mt-20 md:mt-0 clip-our-location-top bg-white sm:px-10">
         <div className="container mx-auto">
           <div data-aos="fade-right" className="mb-10">
             <h2 className="main-color mb-4 pt-9">
@@ -192,7 +191,7 @@ export default function Home() {
             data-aos="zoom-in"
             className="flex justify-center sm:justify-start mb-10"
           >
-            <button className="uppercase main-button main-color-bg text-white text-xs rounded-full px-14 py-4 sm:py-6">
+            <button className="uppercase main-button main-color-bg text-white text-xs rounded-full px-14 sm:px-10 py-4 sm:py-6">
               get in touch with us
             </button>
           </div>
@@ -265,7 +264,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#DDDDDD]  clip-path-top -mb-36 ">
+      <div className="bg-[#DDDDDD]  clip-path-top -mb-36 sm:px-8">
         <div className="container mx-auto pt-20 ">
           <h2
             data-aos="fade-down"
@@ -318,10 +317,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto pb-28 pt-10 sm:pt-20">
+        <div className="container mx-auto pb-28 pt-10 sm:pt-20 sm:pb-40">
           <h2
             data-aos="fade-down"
-            className="main-color text-lg md:text-3xl mb-5 "
+            className="main-color text-lg md:text-3xl mb-5 sm:mb-10"
           >
             Our OTA Partners
           </h2>

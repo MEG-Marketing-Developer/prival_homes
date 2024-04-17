@@ -6,6 +6,9 @@ import { AOSInit } from "./aos";
 export const metadata: Metadata = {
   title: "Prival Homes",
   description: "Booking Now",
+  // icons:{
+  //   icon:"@/public/images/navBar/logo.svg"
+  // }
 };
 
 export default function RootLayout({
