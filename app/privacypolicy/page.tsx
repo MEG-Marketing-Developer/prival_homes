@@ -19,7 +19,7 @@ const page = () => {
         />
         <h4
           data-aos="zoom-in"
-          className="text-[21px] sm:text-[31px]   text-white pl-5 sm:pl-14 lg:pl-20 xl:pl-24 mb-6 sm:mb-8 lg:mb-12"
+          className="px-4 sm:px-32 text-[21px] sm:text-[31px] text-white  mb-6 sm:mb-8 lg:mb-12"
         >
           Privacy Policy
         </h4>
@@ -118,7 +118,7 @@ const page = () => {
         </div>
         <div className=" py-4">
           <h4 className="main-color mt-2 mb-4 text-[20px] sm:text-3xl">
-            Children's Privacy:
+            Children&apos;s Privacy:
           </h4>
           <p>
             Our services are not intended for individuals under the age of 18.
@@ -143,7 +143,7 @@ const page = () => {
             If you have any questions or concerns about our Privacy Policy,
             please contact us at{" "}
             <Link
-              href={"/"}
+              href={"mailto:info@theprival.com"}
               className="text-blue-500 hover:text-blue-700 font-semibold transition"
             >
               info@theprival.com

@@ -19,7 +19,7 @@ const conditions = () => {
         />
         <h4
           data-aos="zoom-in"
-          className="text-[21px] sm:text-[31px]   text-white pl-5 sm:pl-14 lg:pl-20 xl:pl-24 mb-6 sm:mb-8 lg:mb-12"
+          className="px-4 sm:px-32 text-[21px] sm:text-[31px]   text-white  mb-6 sm:mb-8 lg:mb-12"
         >
           Terms & Conditions
         </h4>
@@ -168,7 +168,7 @@ const conditions = () => {
             understood, and agree to be bound by these terms and conditions. If
             you have any questions or concerns, please contact us at{" "}
             <Link
-              href={"/"}
+              href={"mailto:info@theprival.com"}
               className="text-blue-500 hover:text-blue-700 font-semibold transition"
             >
               info@theprival.com
