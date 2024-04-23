@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
 
-const partnerWithUs = () => {
+const PartnerWithUs = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const { alert, hideAlert, showAlert } = useAlert();
@@ -154,4 +154,4 @@ const partnerWithUs = () => {
   );
 };
 
-export default partnerWithUs;
+export default PartnerWithUs;
