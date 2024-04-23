@@ -11,101 +11,118 @@ import prop4 from "@/public/images/properties/prop4.svg";
 const Properties = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto mt-10">
-        <form
-          className="font-blissful"
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-        >
-          <div className="flex gap-4 md:gap-10  md:flex-nowrap lg:justify-between -mx-[10px] sm:mx-0">
-            <label
-              data-aos="zoom-in"
-              className="input input-bordered  flex items-center text-xs flex-grow bg-[#ECECEA] "
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                className="w-4 h-4 opacity-70"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                  clipRule="evenodd"
+      <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] mt-10">
+        <form>
+          <div className="font-blissful font-bold xl:flex justify-between items-center">
+            <div className="flex flex-col xl:max-w-[450px] mb-10 xl:mb-0 ">
+              <label className="bg-[#E7E7E5] input input-bordered flex items-center gap-2 xl:min-w-[450px]  mb-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  className="w-4 h-4 opacity-70"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <input
+                  type="text"
+                  className="grow "
+                  placeholder="Enter The Location"
                 />
-              </svg>
-              <input
-                type="text"
-                className="grow ml-2 w-[90px] lg:w-full md:text-lg"
-                placeholder="Enter The Location"
-              />
-            </label>
-            <div data-aos="zoom-in" className=" md:w-[250px] ">
-              <select className="select select-bordered w-full text-xs bg-[#ECECEA] md:text-lg ">
+              </label>
+              <div className="flex items-center justify-between ">
+                <select className="select select-bordered w-full max-w-xs xl:min-w-[100px] tracking-[2px]">
+                  <option disabled selected>
+                    From
+                  </option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
+                </select>
+                <select className="select select-bordered w-full max-w-xs xl:min-w-[100px] ml-2 tracking-[2px]">
+                  <option disabled selected>
+                    To
+                  </option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
+                </select>
+                <select className="select select-bordered w-full max-w-lg xl:min-w-[200px] ml-2 tracking-[2px]">
+                  <option disabled selected>
+                    Guests
+                  </option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
+                </select>
+              </div>
+            </div>
+            <div className="mb-10 xl:mb-0">
+              <select
+                className="bg-[#E7E7E5] select select-bordered w-full 
+            xl:min-w-[230px] px-24 tracking-[3px] mb-5  "
+              >
                 <option disabled selected>
-                  Sort by: Price
+                  Property Type?
                 </option>
-                <option>$100</option>
-                <option>$200</option>
+                <option>Han Solo</option>
+                <option>Greedo</option>
               </select>
-              <div className="flex gap-2 items-center mt-5 text-xs">
-                <span className="absolute -left-10 sm:relative md:text-lg sm:left-0">
-                  Price
-                </span>
-                <select className="select select-bordered w-20 text-xs md:w-full  md:text-lg bg-[#ECECEA]">
+              <div className="flex">
+                <select className="select select-bordered w-full max-w-xs tracking-[3px]">
+                  <option disabled selected>
+                    Rooms
+                  </option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
+                </select>
+                <select className="select select-bordered w-full max-w-xs ml-5 tracking-[3px]">
+                  <option disabled selected>
+                    Bathroom
+                  </option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs px-24 tracking-[3px] mb-5">
+                <option disabled selected>
+                  Sort By : Price
+                </option>
+                <option>Han Solo</option>
+                <option>Greedo</option>
+              </select>
+              <div className="flex">
+                <select className="select select-bordered w-full max-w-xs tracking-[3px]">
                   <option disabled selected>
                     Min
                   </option>
-                  <option>$100</option>
-                  <option>$200</option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
                 </select>
-                <select className="select select-bordered  w-20 text-xs md:w-full md:text-lg bg-[#ECECEA]">
+                <select className="select select-bordered w-full max-w-xs ml-5 tracking-[3px]">
                   <option disabled selected>
                     Max
                   </option>
-                  <option>$100</option>
-                  <option>$200</option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
                 </select>
               </div>
             </div>
           </div>
-          <div
-            data-aos="zoom-in"
-            className=" grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 lg:max-w-[1000px] xl:-mt-10 -mx-[10px] sm:mx-0"
-          >
-            <select className="select select-bordered text-xs bg-[#ECECEA] md:text-lg ">
-              <option disabled selected>
-                Property Type
-              </option>
-              <option>$100</option>
-              <option>$200</option>
-            </select>
-            <select className="select select-bordere text-xs  bg-[#ECECEA] md:text-lg">
-              <option disabled selected>
-                Location
-              </option>
-              <option>$100</option>
-              <option>$200</option>
-            </select>
-            <select className="select select-bordere text-xs  bg-[#ECECEA] md:text-lg">
-              <option disabled selected>
-                Rooms
-              </option>
-              <option>$100</option>
-              <option>$200</option>
-            </select>
-            <select className="select select-bordere text-xs bg-[#ECECEA] md:text-lg">
-              <option disabled selected>
-                Bathroom
-              </option>
-              <option>$100</option>
-              <option>$200</option>
-            </select>
+          <div className="">
+            <button className="px-16 py-4 text-white mt-10 tracking-[3px] rounded-full main-color-bg uppercase">
+              Search
+            </button>
           </div>
         </form>
         <div>
-          <h3 data-aos="fade-right" className="main-color mt-20 ">
+          <h3
+            data-aos="fade-right"
+            className="main-color mt-20 font-blissful text-[17px] sm:text-[25px] lg:text-[35px] xl:text-[50px] tracking-[2.5px] "
+          >
             Properties
           </h3>
           <h4 data-aos="fade-right" className="mb-8 text-[.9rem] md:text-2xl">

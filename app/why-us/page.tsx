@@ -7,11 +7,18 @@ import whyUs4 from "@/public/images/whyUs/whyUs4.svg";
 const WhyUs = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto my-20">
-        <h3 data-aos="fade-up" className="main-color mt-20 mb-4">
+      <div className="container mx-auto my-20 sm:px-[90px] 2xl:px-[160px]">
+        <h3
+          data-aos="fade-up"
+          className="font-blissful main-color mt-20 mb-4 xl:tracking-[5px] tracking-[2.5px] text-[17px] md:text-[25px] lg:text-[30px] 2xl:text-[50px]"
+        >
           Why Us
         </h3>
-        <p data-aos="fade-up" className="mb-6">
+        <p
+          data-aos="fade-up"
+          className="mb-6 text-[12px] sm:text-[16px] lg:text-[18px] xl:text-[28px] 
+             text-gray-500 sm:text-[#161615] leading-[1.4]"
+        >
           Prival excels as a vacation home rental company, harmonizing property
           portfolios with facility management and operational partners for a
           streamlined and effective approach.

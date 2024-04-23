@@ -7,8 +7,8 @@ import foot from "@/public/images/footer/footerLogo.svg";
 import Image from "next/image";
 const Footer = () => {
   return (
-    <footer className=" bg-[#47664D] footer-clip-path pt-10 mt-10 sm:px-8">
-      <div className="container mx-auto py-10 ">
+    <footer className=" bg-[#3B543C] footer-clip-path pt-10 mt-10 sm:px-8">
+      <div className="container mx-auto py-10 sm:px-[90px] 2xl:px-[160px] ">
         <div className="sm:flex justify-end">
           <div className="ml-32 sm:ml-0 flex gap-12 sm:gap-x-28 mb-5 ">
             <nav className="text-white">

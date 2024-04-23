@@ -21,7 +21,7 @@ const NavBar = () => {
       <div className="absolute bg-white w-[100%] navBar-clip-path -bottom-1 h-[6.25rem] "></div>
       <div className="sticky top-0 z-10  text-white  ">
         <section
-          className={`container mx-auto flex items-center  pb-3 pt-10  sm:px-6 ${
+          className={`container mx-auto flex items-center  pb-3 pt-10 px-[5px] sm:px-[90px] 2xl:px-[160px] ${
             isMobileMenuOpen ? "justify-end" : "justify-between"
           }`}
         >
@@ -32,7 +32,7 @@ const NavBar = () => {
               <Link href={"/"}>
                 <img
                   src={"/images/navBar/logo.svg"}
-                  className="pb-4 w-32 2xl:w-36"
+                  className="pb-4 w-[120px] text-yellow-400"
                 />
               </Link>
             </h1>
@@ -67,38 +67,42 @@ const NavBar = () => {
             </button>
             <nav
               className={`hidden 
-              md:space-x-6 lg:space-x-14 2xl:space-x-24
-              md:text-[1rem] 2xl:text-lg
-              lg:block ${isMobileMenuOpen ? "hidden" : "flex"}`}
+              md:space-x-6 lg:space-x-14 
+              lg:text-[14px]
+              2xl:space-x-20 2xl:text-[18px]
+              font-blissful tracking-[1.5px]
+              mt-4
+              lg:block 
+              ${isMobileMenuOpen ? "hidden" : "flex"}`}
               aria-label="main"
             >
               <Link
-                className="hover:opacity-90  main-color font-blissful "
+                className="hover:opacity-90  main-color "
                 href={"/about-us"}
               >
                 ABOUT US
               </Link>
               <Link
                 href={"/why-us"}
-                className="hover:opacity-90   main-color font-blissful "
+                className="hover:opacity-90   main-color  "
               >
                 WHY US
               </Link>
               <Link
                 href={"/properties"}
-                className="hover:opacity-90  main-color  font-blissful "
+                className="hover:opacity-90  main-color   "
               >
                 PROPERTIES
               </Link>
               <Link
-                href={"/host-with-us"}
-                className="hover:opacity-90  main-color  font-blissful "
+                href={"/partner-with-us"}
+                className="hover:opacity-90  main-color   "
               >
-                HOST WITH US
+                PARTNER WITH US
               </Link>
               <Link
                 href={"/contact-us"}
-                className="hover:opacity-90  main-color  font-blissful "
+                className="hover:opacity-90  main-color   "
               >
                 CONTACT US
               </Link>
@@ -107,18 +111,19 @@ const NavBar = () => {
         </section>
         <section
           id="mobile-menu"
-          className={`clip-path-bottom top-36 justify-center transition-all duration-300 absolute -mt-[66px] ${
+          className={`clip-path-bottom top-36 justify-center transition-all duration-300 absolute -mt-[66px]    ${
             isMobileMenuOpen ? "flex" : "hidden"
-          } w-full flex-col bg-white text-xl lg:hidden`}
+          } w-full flex-col bg-white lg:hidden`}
         >
           <nav
-            className="flex flex-col items-center  min-h-screen  pt-8 pb-14 px-12 text-2xl tracking-wide"
+            className="flex flex-col items-center  min-h-screen 
+             pt-8 pb-14 px-12 text-xl font-blissful tracking-[1.5px]"
             aria-label="mobile"
           >
             <Link
               onClick={toggleMenu}
               href={"/about-us"}
-              className="w-full flex justify-between py-6  hover:opacity-90 text-[#47664D] font-blissful"
+              className="w-full flex justify-between py-6  hover:opacity-90 main-color"
             >
               <span>ABOUT US</span>
               <div className="text-black">
@@ -128,7 +133,7 @@ const NavBar = () => {
             <Link
               onClick={toggleMenu}
               href={"/why-us"}
-              className="w-full py-6 flex justify-between text-center  hover:opacity-90 text-[#47664D] font-blissful"
+              className="w-full py-6 flex justify-between text-center  hover:opacity-90 main-color"
             >
               <span>WHY US</span>
               <div className="text-black">
@@ -138,7 +143,7 @@ const NavBar = () => {
             <Link
               onClick={toggleMenu}
               href={"/properties"}
-              className="w-full py-6 flex justify-between text-center  hover:opacity-90 text-[#47664D] font-blissful"
+              className="w-full py-6 flex justify-between text-center  hover:opacity-90 main-color"
             >
               <span>PROPERTIES</span>
               <div className="text-black">
@@ -147,10 +152,10 @@ const NavBar = () => {
             </Link>
             <Link
               onClick={toggleMenu}
-              href={"/host-with-us"}
-              className="w-full py-6 flex justify-between text-center  hover:opacity-90 text-[#47664D] font-blissful"
+              href={"/partner-with-us"}
+              className="w-full py-6 flex justify-between text-center  hover:opacity-90 main-color"
             >
-              <span>HOST WITH US</span>
+              <span>PARTNER WITH US</span>
               <div className="text-black">
                 <IoIosArrowForward />
               </div>
@@ -158,7 +163,7 @@ const NavBar = () => {
             <Link
               onClick={toggleMenu}
               href={"/contact-us"}
-              className="w-full py-6 flex justify-between text-center  hover:opacity-90 text-[#47664D] font-blissful"
+              className="w-full py-6 flex justify-between text-center  hover:opacity-90 main-color"
             >
               <span>CONTACT US</span>
               <div className="text-black">

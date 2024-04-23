@@ -23,7 +23,7 @@
     font-family: "avenirbook", system-ui, sans-serif;
     letter-spacing: 0.8px;
   }
-  h1,
+  /* h1,
   h2,
   h3,
   h4,
@@ -31,8 +31,8 @@
   h6 {
     font-family: "blissful_thinkingregular", system-ui, sans-serif;
     letter-spacing: 1.5px;
-  }
-  @screen xs {
+  } */
+  /* @screen xs {
     body {
       @apply text-body-xs;
     }
@@ -138,7 +138,7 @@
     h4 {
       @apply text-heading-four-xl;
     }
-  }
+  } */
 }
 
 @layer utilities {
@@ -179,14 +179,10 @@
     clip-path: polygon(0 0, 100% 18%, 100% 89%, 0 99%);
   }
   .main-color {
-    color: #47664D;
+    color: #3B543C;
   }
   .main-color-bg {
-    background-color: #47664D;
-  }
-  .main-button {
-    @apply text-[.65rem] sm:text-[1.25rem] lg:text-[1.625rem] 2xl:text-[1.75rem]
-    tracking-[1px];
+    background-color: #3B543C;
   }
 
 /* slider */
