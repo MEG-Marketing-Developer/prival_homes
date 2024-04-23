@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-
+import User from "./User";
 const NavBar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const NavBar = () => {
       <div className="absolute bg-white w-[100%] navBar-clip-path -bottom-1 h-[6.25rem] "></div>
       <div className="sticky top-0 z-10  text-white  ">
         <section
-          className={`container mx-auto flex items-center  pb-3 pt-10 px-[5px] sm:px-[90px] 2xl:px-[160px] ${
+          className={`container mx-auto sm:px-[90px] 2xl:px-[160px] flex items-center  pb-3 pt-10 px-[5px]  ${
             isMobileMenuOpen ? "justify-end" : "justify-between"
           }`}
         >

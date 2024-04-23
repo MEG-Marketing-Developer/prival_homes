@@ -1,3 +1,4 @@
+import User from './components/User'
 import Link from "next/link";
 import Image from "next/image";
 import hero from "@/public/images/home/hero.svg";
@@ -57,7 +58,7 @@ export default function Home() {
   ];
   return (
     <>
-      <div
+      {/* <div
         className={`hero-clip-path relative hero min-h-screen `}
         style={{ minHeight: "calc(100vh - 140px)" }}
       >
@@ -358,7 +359,9 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
+            <User />
+
     </>
   );
 }
