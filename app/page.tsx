@@ -1,4 +1,4 @@
-import User from './components/User'
+import User from "./components/User";
 import Link from "next/link";
 import Image from "next/image";
 import hero from "@/public/images/home/hero.svg";
@@ -58,7 +58,7 @@ export default function Home() {
   ];
   return (
     <>
-      {/* <div
+      <div
         className={`hero-clip-path relative hero min-h-screen `}
         style={{ minHeight: "calc(100vh - 140px)" }}
       >
@@ -72,9 +72,7 @@ export default function Home() {
         />
         <div className="hero-content text-center ">
           <div className="max-w-5xl">
-            <h1
-              className="mb-12 text-white xl:tracking-[5px] tracking-[2.5px] text-[17px] md:text-[25px] lg:text-[30px] 2xl:text-[50px] "
-            >
+            <h1 className="mb-12 text-white xl:tracking-[5px] tracking-[2.5px] text-[17px] md:text-[25px] lg:text-[30px] 2xl:text-[50px] ">
               EXPLORE YOUR LIVING WITH PRIVAL
             </h1>
             <button
@@ -96,8 +94,10 @@ export default function Home() {
             <h2 className="main-color mt-10 mb-8 font-blissful text-[17px] sm:text-[25px] lg:text-[35px] xl:text-[50px] tracking-[2.5px]">
               Be our guest
             </h2>
-            <p className="text-[12px] sm:text-[16px] lg:text-[18px] xl:text-[28px] 
-             text-gray-500 sm:text-[#161615] leading-[1.4]">
+            <p
+              className="text-[12px] sm:text-[16px] lg:text-[18px] xl:text-[28px] 
+             text-gray-500 sm:text-[#161615] leading-[1.4]"
+            >
               Welcome to Prival Homes in Dubai! Enjoy stunning views, modern
               interiors, and top-notch amenities for an unforgettable stay. Our
               dedicated concierge ensures personalized hospitality, making
@@ -106,12 +106,24 @@ export default function Home() {
           </div>
           <div className="max-w-5xl  grid grid-cols-4 items-center mt-14 lg:mt-28 ">
             <div className="p-5 flex flex-col justify-center items-center gap-4 ">
-              <Image src={location} alt="location" className="w-[38px] lg:w-16  xl:w-24" />
-              <p className="main-color  text-[10px] lg:text-[18px] xl:text-[26px] mt-2">Loaction</p>
+              <Image
+                src={location}
+                alt="location"
+                className="w-[38px] lg:w-16  xl:w-24"
+              />
+              <p className="main-color  text-[10px] lg:text-[18px] xl:text-[26px] mt-2">
+                Loaction
+              </p>
             </div>
             <div className="p-5 flex flex-col justify-center items-center gap-4 ">
-              <Image src={interior} alt="interior" className="w-[38px]  lg:w-16  xl:w-24" />
-              <p className="main-color  text-[10px] lg:text-[18px] xl:text-[26px] mt-2">Interior</p>
+              <Image
+                src={interior}
+                alt="interior"
+                className="w-[38px]  lg:w-16  xl:w-24"
+              />
+              <p className="main-color  text-[10px] lg:text-[18px] xl:text-[26px] mt-2">
+                Interior
+              </p>
             </div>
             <div className="p-5 flex flex-col justify-center items-center gap-4 ">
               <Image
@@ -124,8 +136,14 @@ export default function Home() {
               </p>
             </div>
             <div className="p-5 flex flex-col justify-center items-center gap-4 ">
-              <Image src={services} alt="services" className="w-[38px] lg:w-16  xl:w-24" />
-              <p className="main-color text-[10px] lg:text-[18px] xl:text-[26px] mt-2 ">Services</p>
+              <Image
+                src={services}
+                alt="services"
+                className="w-[38px] lg:w-16  xl:w-24"
+              />
+              <p className="main-color text-[10px] lg:text-[18px] xl:text-[26px] mt-2 ">
+                Services
+              </p>
             </div>
           </div>
         </div>
@@ -294,7 +312,7 @@ export default function Home() {
       <div className="bg-[#DDDDDD]  clip-path-top -mb-36 sm:px-8 py-20">
         <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] pt-20 ">
           <h2
-             data-aos="fade-down"
+            data-aos="fade-down"
             className="main-color text-lg md:text-3xl mb-14 font-blissful tracking-[3px]"
           >
             Our Coalition
@@ -359,9 +377,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div> */}
-            <User />
-
+      </div>
     </>
   );
 }

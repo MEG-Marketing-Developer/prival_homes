@@ -8,6 +8,7 @@ import prop1 from "@/public/images/properties/prop1.svg";
 import prop2 from "@/public/images/properties/prop2.svg";
 import prop3 from "@/public/images/properties/prop3.svg";
 import prop4 from "@/public/images/properties/prop4.svg";
+import Link from "next/link";
 const Properties = () => {
   return (
     <div className="bg-white">
@@ -34,81 +35,139 @@ const Properties = () => {
                   placeholder="Enter The Location"
                 />
               </label>
-              <div className="flex items-center justify-between ">
-                <select className="select select-bordered w-full max-w-xs xl:min-w-[100px] tracking-[2px]">
+              <div className="flex items-center justify-between gap-4">
+                <Link
+                  href={"/contact-us"}
+                  className="flex justify-center items-center bg-[#E7E7E5] select select-bordered w-full max-w-xs xl:min-w-[100px] tracking-[2px]"
+                >
+                  From
+                  {/* <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs xl:min-w-[100px] tracking-[2px]">
                   <option disabled selected>
                     From
                   </option>
                   <option>Han Solo</option>
                   <option>Greedo</option>
-                </select>
-                <select className="select select-bordered w-full max-w-xs xl:min-w-[100px] ml-2 tracking-[2px]">
-                  <option disabled selected>
+                </select> */}
+                </Link>
+                <Link
+                  href={"/contact-us"}
+                  className="flex justify-center items-center bg-[#E7E7E5] select select-bordered w-full max-w-xs xl:min-w-[100px] tracking-[2px]"
+                >
+                  To
+                  {/* <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs xl:min-w-[100px] ml-2 tracking-[2px]">
+                   <option disabled selected>
                     To
                   </option>
                   <option>Han Solo</option>
-                  <option>Greedo</option>
-                </select>
-                <select className="select select-bordered w-full max-w-lg xl:min-w-[200px] ml-2 tracking-[2px]">
-                  <option disabled selected>
-                    Guests
-                  </option>
-                  <option>Han Solo</option>
-                  <option>Greedo</option>
-                </select>
+                  <option>Greedo</option> 
+                </select> */}
+                </Link>
+                <Link
+                  href={"/contact-us"}
+                  className="flex justify-center items-center bg-[#E7E7E5] select select-bordered w-full max-w-xs xl:min-w-[100px] tracking-[2px]"
+                >
+                  Guests
+                  {/* <select className="bg-[#E7E7E5] select select-bordered w-full max-w-lg xl:min-w-[200px] ml-2 tracking-[2px]">
+                    <option disabled selected>
+                      Guests
+                    </option>
+                    <option>Han Solo</option>
+                    <option>Greedo</option>
+                  </select> */}
+                </Link>
               </div>
             </div>
             <div className="mb-10 xl:mb-0">
-              <select
+              <Link
+                href={"/contact-us"}
+                className="flex justify-center items-center bg-[#E7E7E5] select select-bordered w-full 
+                           xl:min-w-[230px] px-24 tracking-[3px] mb-5  "
+              >
+                Property Type?
+                {/* <select
                 className="bg-[#E7E7E5] select select-bordered w-full 
-            xl:min-w-[230px] px-24 tracking-[3px] mb-5  "
+                           xl:min-w-[230px] px-24 tracking-[3px] mb-5  "
               >
                 <option disabled selected>
                   Property Type?
                 </option>
                 <option>Han Solo</option>
-                <option>Greedo</option>
-              </select>
+                <option>Greedo</option> 
+              </select> */}
+              </Link>
+
               <div className="flex">
-                <select className="select select-bordered w-full max-w-xs tracking-[3px]">
-                  <option disabled selected>
+                <Link
+                  href={"/contact-us"}
+                  className="flex justify-center items-center bg-[#E7E7E5] select select-bordered w-full max-w-xs ml-5 tracking-[3px]"
+                >
+                  Rooms
+                  {/* <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs tracking-[3px]">
+                   <option disabled selected>
                     Rooms
                   </option>
                   <option>Han Solo</option>
                   <option>Greedo</option>
-                </select>
-                <select className="select select-bordered w-full max-w-xs ml-5 tracking-[3px]">
-                  <option disabled selected>
+                </select> */}
+                </Link>
+                <Link
+                  href={"/contact-us"}
+                  className="flex justify-center items-center bg-[#E7E7E5] select select-bordered w-full max-w-xs ml-5 tracking-[3px]"
+                >
+                  Bathroom
+                  {/* <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs ml-5 tracking-[3px]">
+                   <option disabled selected>
                     Bathroom
                   </option>
                   <option>Han Solo</option>
-                  <option>Greedo</option>
-                </select>
+                  <option>Greedo</option> 
+                </select> */}
+                </Link>
               </div>
             </div>
             <div>
-              <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs px-24 tracking-[3px] mb-5">
-                <option disabled selected>
+              <Link
+                href={"/contact-us"}
+                className="flex justify-center items-center bg-[#E7E7E5] select select-bordered w-full max-w-xs px-24 tracking-[3px] mb-5"
+              >
+                Sort By : Price
+                {/* <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs px-24 tracking-[3px] mb-5">
+                Sort By : Price
+
+               <option disabled selected>
                   Sort By : Price
                 </option>
                 <option>Han Solo</option>
-                <option>Greedo</option>
-              </select>
-              <div className="flex">
-                <select className="select select-bordered w-full max-w-xs tracking-[3px]">
-                  <option disabled selected>
+                <option>Greedo</option> 
+              </select> */}
+              </Link>
+              <div className="flex gap-4">
+                <Link
+                  href={"/contact-us"}
+                  className="flex justify-center items-center  bg-[#E7E7E5] select select-bordered w-full max-w-xs tracking-[3px]"
+                >
+                  Min
+                  {/* <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs tracking-[3px]">
+                   <option disabled selected>
                     Min
                   </option>
                   <option>Han Solo</option>
-                  <option>Greedo</option>
-                </select>
-                <select className="select select-bordered w-full max-w-xs ml-5 tracking-[3px]">
-                  <option disabled selected>
+                  <option>Greedo</option> 
+                </select> */}
+                </Link>
+                <Link
+                  href={"/contact-us"}
+                  className="flex justify-center items-center bg-[#E7E7E5] select select-bordered w-full max-w-xs tracking-[3px]"
+                >
+                  Max
+                  {/* <select className="bg-[#E7E7E5] select select-bordered w-full max-w-xs ml-5 tracking-[3px]">
+                   <option disabled selected>
                     Max
                   </option>
                   <option>Han Solo</option>
                   <option>Greedo</option>
-                </select>
+                </select> */}
+                </Link>
               </div>
             </div>
           </div>
@@ -144,7 +203,8 @@ const Properties = () => {
             />
           </div>
           <div className="grid grid-cols-2 mb-10 gap-4 md:justify-items-center lg:gap-8 order-1 md:w-3/4 md:mx-auto">
-            <div
+            <Link
+              href={"properties/property-details"}
               data-aos="fade-up"
               className="card  bg-base-100 shadow-xl max-w-[25rem] "
             >
@@ -175,8 +235,10 @@ const Properties = () => {
                 </div>
                 <h4 className=" mt-5 text-xs lg:text-lg">AED 700.00 /Night</h4>
               </div>
-            </div>
-            <div
+            </Link>
+
+            <Link
+              href={"properties/property-details"}
               data-aos="fade-up"
               className="card bg-base-100 shadow-xl max-w-[25rem] "
             >
@@ -209,8 +271,9 @@ const Properties = () => {
                   AED 4,200.00 /Night
                 </h4>
               </div>
-            </div>
-            <div
+            </Link>
+            <Link
+              href={"properties/property-details"}
               data-aos="fade-up"
               className="card bg-base-100 shadow-xl max-w-[25rem] "
             >
@@ -241,8 +304,9 @@ const Properties = () => {
                 </div>
                 <h4 className=" mt-5 text-xs lg:text-lg">AED 900.00 /Night</h4>
               </div>
-            </div>
-            <div
+            </Link>
+            <Link
+              href={"properties/property-details"}
               data-aos="fade-up"
               className="card bg-base-100 shadow-xl max-w-[25rem] "
             >
@@ -275,7 +339,7 @@ const Properties = () => {
                   AED 6,200.00 /Night
                 </h4>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center lg:justify-start items-center lg:ml-32 xl:ml-52 2xl:ml-72 lg:-mt-16 ">
