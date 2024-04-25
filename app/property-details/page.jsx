@@ -5,15 +5,13 @@ import prop2 from "@/public/images/propertyDetails/propDetails2.png";
 import prop3 from "@/public/images/propertyDetails/propDetails3.png";
 import prop4 from "@/public/images/propertyDetails/propDetails4.png";
 import prop5 from "@/public/images/propertyDetails/propDetails5.png";
-import prop6 from "@/public/images/propertyDetails/propDetails6.png";
-import prop7 from "@/public/images/propertyDetails/propDetails7.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const PropertyDetails = () => {
   const router = useRouter();
   const items = [
     { name: "item1", img: prop1, alt: "prop1" },
@@ -37,7 +35,7 @@ const page = () => {
   return (
     <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] py-10">
       <div>
-        <p className="flex space-x-1 items-center mb-4 font-blissful">
+        <p className="flex space-x-1 items-center mb-4 font-blissful text-2xl">
           <span>Home</span>
           <span>
             <MdKeyboardArrowRight />
@@ -64,14 +62,19 @@ const page = () => {
           ))}
         </div>
         <div className="relative flex justify-center w-full mt-5 gap-4">
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-50">
-            <span onClick={prevItem} className="btn btn-circle main-color-bg">
-              <MdKeyboardArrowLeft color="white" />
-            </span>
-            <span onClick={nextItem} className="btn btn-circle main-color-bg">
-              <MdKeyboardArrowRight color="white" width={20}/>
-            </span>
-          </div>
+          <span
+            onClick={nextItem}
+            className="absolute cursor-pointer opacity-90 top-[70px] -right-9 z-20 -translate-y-6 rounded-full flex justify-center items-center main-color-bg w-20 h-20"
+          >
+            <MdKeyboardArrowRight color="white" className="text-4xl" />
+          </span>
+          <span
+            onClick={prevItem}
+            
+            className="absolute cursor-pointer opacity-90 top-[70px] -left-9 transform -translate-y-6 z-20 rounded-full flex justify-center items-center main-color-bg w-20 h-20"
+          >
+            <MdKeyboardArrowLeft color="white" className="text-4xl " />
+          </span>
           {items.map((item, index) => (
             <Link
               onClick={() => setCurrentItem(index + 1)}
@@ -92,4 +95,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PropertyDetails;

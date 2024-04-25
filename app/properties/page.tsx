@@ -204,7 +204,7 @@ const Properties = () => {
           </div>
           <div className="grid grid-cols-2 mb-10 gap-4 md:justify-items-center lg:gap-8 order-1 md:w-3/4 md:mx-auto">
             <Link
-              href={"properties/property-details"}
+              href={"/property-details"}
               data-aos="fade-up"
               className="card  bg-base-100 shadow-xl max-w-[25rem] "
             >
@@ -238,7 +238,7 @@ const Properties = () => {
             </Link>
 
             <Link
-              href={"properties/property-details"}
+              href={"/property-details"}
               data-aos="fade-up"
               className="card bg-base-100 shadow-xl max-w-[25rem] "
             >
@@ -273,7 +273,7 @@ const Properties = () => {
               </div>
             </Link>
             <Link
-              href={"properties/property-details"}
+              href={"/property-details"}
               data-aos="fade-up"
               className="card bg-base-100 shadow-xl max-w-[25rem] "
             >
@@ -306,7 +306,7 @@ const Properties = () => {
               </div>
             </Link>
             <Link
-              href={"properties/property-details"}
+              href={"/property-details"}
               data-aos="fade-up"
               className="card bg-base-100 shadow-xl max-w-[25rem] "
             >
