@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { MdBathroom } from "react-icons/md";
+import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import { MdBedroomParent } from "react-icons/md";
 import map from "@/public/images/properties/map.svg";
 import prop1 from "@/public/images/properties/prop1.svg";
@@ -10,6 +12,11 @@ import prop3 from "@/public/images/properties/prop3.svg";
 import prop4 from "@/public/images/properties/prop4.svg";
 import Link from "next/link";
 const PropertiesPage = () => {
+  const [inWishlist, setAddInWishlist] = useState(false);
+  const addToWishlist = () => {
+    // handle create a new wishlist for that user
+    setAddInWishlist(!inWishlist);
+  };
   return (
     <div className="bg-white">
       <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] mt-10">
@@ -203,16 +210,28 @@ const PropertiesPage = () => {
             />
           </div>
           <div className="grid grid-cols-2 mb-10 gap-4 md:justify-items-center lg:gap-8 order-1 md:w-3/4 md:mx-auto">
-            <Link
-              href={"/property-details"}
+            <div
               data-aos="fade-up"
-              className="card  bg-base-100 shadow-xl max-w-[25rem] "
+              className="relative shadow-md max-w-[25rem] "
             >
-              <figure className="h-[180px] lg:h-[300px]">
-                <Image src={prop1} alt="properties" />
+              <figure
+                onClick={addToWishlist}
+                className="absolute text-4xl right-6 top-7 z-40 cursor-pointer"
+              >
+                {inWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
               </figure>
+              <Link href={"/property-details"}>
+                <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
+                  <Image
+                    src={prop1}
+                    fill
+                    alt="properties"
+                    className="object-cover rounded-xl"
+                  />
+                </figure>
+              </Link>
               <div className="px-3 py-4">
-                <h4 className="text-[.5rem] lg:text-lg">
+                <h4 className="text-[.5rem] lg:text-lg min-h-16">
                   Sky-High Living at The Palm Tower - St. Regis
                 </h4>
                 <div className="flex gap-2 mt-4">
@@ -235,18 +254,30 @@ const PropertiesPage = () => {
                 </div>
                 <h4 className=" mt-5 text-xs lg:text-lg">AED 700.00 /Night</h4>
               </div>
-            </Link>
+            </div>
 
-            <Link
-              href={"/property-details"}
+            <div
               data-aos="fade-up"
-              className="card bg-base-100 shadow-xl max-w-[25rem] "
+              className=" relative shadow-md max-w-[25rem] w-full"
             >
-              <figure className="h-[180px] lg:h-[300px]">
-                <Image src={prop2} alt="properties" />
+              <figure
+                onClick={addToWishlist}
+                className="absolute text-4xl right-6 top-7 z-40 cursor-pointer"
+              >
+                {inWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
               </figure>
+              <Link href={"/property-details"}>
+                <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
+                  <Image
+                    src={prop2}
+                    alt="properties"
+                    fill
+                    className="object-cover rounded-xl"
+                  />
+                </figure>
+              </Link>
               <div className="px-3 py-4">
-                <h4 className="text-[.5rem] lg:text-lg">
+                <h4 className="text-[.5rem] lg:text-lg min-h-16">
                   The Address in Dubai Mall
                 </h4>
                 <div className="flex gap-2 mt-4">
@@ -271,17 +302,25 @@ const PropertiesPage = () => {
                   AED 4,200.00 /Night
                 </h4>
               </div>
-            </Link>
-            <Link
-              href={"/property-details"}
+            </div>
+
+            <div
               data-aos="fade-up"
-              className="card bg-base-100 shadow-xl max-w-[25rem] "
+              className="relative shadow-md max-w-[25rem] w-full"
             >
-              <figure className="h-[180px] lg:h-[300px]">
-                <Image src={prop3} alt="properties" />
+                            <figure
+                onClick={addToWishlist}
+                className="absolute text-4xl right-6 top-7 z-40 cursor-pointer"
+              >
+                {inWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
               </figure>
+              <Link href={"/property-details"}>
+                <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
+                  <Image src={prop3} fill alt="properties" className="object-cover rounded-xl" />
+                </figure>
+              </Link>
               <div className="px-3 py-4">
-                <h4 className="text-[.5rem] lg:text-lg">
+                <h4 className="text-[.5rem] lg:text-lg min-h-16">
                   Sky-High Living at The Palm Tower - St. Regis
                 </h4>
                 <div className="flex gap-2 mt-4">
@@ -304,29 +343,36 @@ const PropertiesPage = () => {
                 </div>
                 <h4 className=" mt-5 text-xs lg:text-lg">AED 900.00 /Night</h4>
               </div>
-            </Link>
-            <Link
-              href={"/property-details"}
+            </div>
+            <div
               data-aos="fade-up"
-              className="card bg-base-100 shadow-xl max-w-[25rem] "
+              className="relative shadow-md max-w-[25rem] w-full"
             >
-              <figure className="h-[180px] lg:h-[300px]">
-                <Image src={prop4} alt="properties" />
+                            <figure
+                onClick={addToWishlist}
+                className="absolute text-4xl right-6 top-7 z-40 cursor-pointer"
+              >
+                {inWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
               </figure>
+              <Link href={"/property-details"}>
+                <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
+                  <Image src={prop4} fill alt="properties" className="object-cover rounded-xl" />
+                </figure>
+              </Link>
               <div className="px-3 py-4">
-                <h4 className="text-[.5rem] lg:text-lg">
+                <h4 className="text-[.5rem] lg:text-lg min-h-16">
                   Sky-High Living at The Palm Tower - St. Regis
                 </h4>
                 <div className="flex gap-2 mt-4">
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start  w-full items-center p-[.1875rem] sm:p-2 rounded-sm ">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm ">
                     <span>
-                      <MdBedroomParent className="main-color mr-1 md:ml-2" />
+                      <MdBedroomParent className="main-color mr-1 md:ml-2 " />
                     </span>
                     <span className="text-[.4rem] md:text-xs whitespace-nowrap">
                       1 bedroom
                     </span>
                   </div>
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start  w-full items-center p-[.1875rem] sm:p-2 rounded-sm">
+                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm">
                     <span>
                       <MdBathroom className="main-color mr-1 md:ml-2 " />
                     </span>
@@ -335,11 +381,9 @@ const PropertiesPage = () => {
                     </span>
                   </div>
                 </div>
-                <h4 className=" mt-5 text-xs lg:text-lg">
-                  AED 6,200.00 /Night
-                </h4>
+                <h4 className=" mt-5 text-xs lg:text-lg">AED 900.00 /Night</h4>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
         <div className="flex justify-center lg:justify-start items-center lg:ml-32 xl:ml-52 2xl:ml-72 lg:-mt-16 ">

@@ -381,4 +381,3 @@ export default function Home() {
     </>
   );
 }
-//dark:bg-black dark:bg-grid-white/[0.05]

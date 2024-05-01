@@ -31,7 +31,9 @@ const UserBookingsPage = () => {
         </div>
       </div>
       <p className="mt-10 text-xl font-semibold">2024</p>
-      <div className="divider divider-start text-xl font-semibold mb-10">March</div>
+      <div className="divider divider-start text-xl font-semibold mb-10">
+        March
+      </div>
       <div className="bg-[#F1F1F1] p-9 rounded-md">
         <h1 className="text-lg main-color font-blissful tracking-widest ml-10 mb-3">
           Booking No : 33211120
@@ -56,12 +58,15 @@ const UserBookingsPage = () => {
             </div>
           </div>
           <div className="flex flex-col gap-4 ">
-            <button className="text-sm bg-[#D3D3D3] main-color rounded-full xl:min-w-52 tracking-widest  font-blissful py-3">
+            <Link
+              href={"/change-booking"}
+              className="text-center text-lg bg-[#D3D3D3] main-color rounded-full xl:min-w-56 tracking-widest  font-blissful py-4"
+            >
               CHANGE BOOKING
-            </button>
+            </Link>
             <Link
               href={"/booking-details"}
-              className="text-center text-sm main-color-bg  text-white rounded-full xl:min-w-52 tracking-widest font-blissful  py-3"
+              className="text-center text-lg main-color-bg  text-white rounded-full xl:min-w-56 tracking-widest font-blissful  py-4"
             >
               VIEW DETAILS
             </Link>

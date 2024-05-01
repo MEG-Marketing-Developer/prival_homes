@@ -2,13 +2,14 @@
 import Link from "next/link";
 import profile from "../../public/images/propertyDetails/icons/profile.svg";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-
+import burgerIcon from "@/public/images/home/burgerIcon.svg";
 import Image from "next/image";
 import User from "./User";
+
 const NavBar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,10 +24,26 @@ const NavBar = () => {
     console.log(profileIsOpen);
   };
 
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+        setProfileOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="relative  ">
+    <div className="relative ">
       <header
-        className={`relative  ${
+        className={`relative  ${pathname != "/" && "h-40"}  ${
           pathname === "/" ? "bg-white" : "bg-[#ECECEC]"
         } ${isMobileMenuOpen ? "bg-white" : ""}`}
       >
@@ -44,32 +61,19 @@ const NavBar = () => {
                 <Link href={"/"}>
                   <img
                     src={"/images/navBar/logo.svg"}
-                    className="pb-4 w-[120px] text-yellow-400"
+                    className="pb-4 w-[90px] lg:w-[100px] xl:w-[130px] text-yellow-400"
                   />
                 </Link>
               </h1>
             )}
-            <div>
+            <div className="flex gap-1">
               <button
                 onClick={toggleMenu}
                 className="relative h-8 w-8 cursor-pointer text-3xl lg:hidden "
               >
                 {!isMobileMenuOpen ? (
-                  <div className="text-black">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-8 w-8"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 6h16M4 12h16M4 18h7"
-                      />
-                    </svg>
+                  <div className="text-black ">
+                    <Image src={burgerIcon} alt="burgerIcon" />
                   </div>
                 ) : (
                   <div className="text-black ">
@@ -77,6 +81,31 @@ const NavBar = () => {
                   </div>
                 )}
               </button>
+              {!isMobileMenuOpen && (
+                <div>
+                  <span
+                    onClick={toggleProfile}
+                    className="lg:hidden inline-flex justify-center  items-center align-middle xl:gap-1 cursor-pointer"
+                  >
+                    <Image
+                      src={profile}
+                      alt="profile"
+                      className="w-6 2xl:w-7"
+                    />
+                    {profileIsOpen ? (
+                      <IoIosArrowDown
+                        color="green"
+                        className="text-lg xl:text-xl "
+                      />
+                    ) : (
+                      <IoIosArrowForward
+                        color="green"
+                        className="text-lg xl:text-xl"
+                      />
+                    )}
+                  </span>
+                </div>
+              )}
               <nav
                 className={`hidden 
               md:space-x-6 lg:space-x-10 
@@ -121,13 +150,19 @@ const NavBar = () => {
                 </Link>
                 <span
                   onClick={toggleProfile}
-                  className="inline-flex justify-center items-center align-middle xl:gap-1"
+                  className="inline-flex justify-center items-center align-middle xl:gap-1 cursor-pointer"
                 >
                   <Image src={profile} alt="profile" className="w-6 2xl:w-7" />
                   {profileIsOpen ? (
-                    <IoIosArrowDown color="green" className="text-lg xl:text-xl " />
+                    <IoIosArrowDown
+                      color="green"
+                      className="text-lg xl:text-xl "
+                    />
                   ) : (
-                    <IoIosArrowForward color="green" className="text-lg xl:text-xl" />
+                    <IoIosArrowForward
+                      color="green"
+                      className="text-lg xl:text-xl"
+                    />
                   )}
                 </span>
               </nav>
@@ -199,8 +234,8 @@ const NavBar = () => {
         </div>
       </header>
       {profileIsOpen && (
-        <div className="absolute z-50 w-full -mt-1">
-          <User onTranslate={(bool)=>setProfileOpen(bool)} />
+        <div ref={buttonRef} className="absolute z-50 w-full -mt-1">
+          <User onTranslate={(bool) => setProfileOpen(bool)} />
         </div>
       )}
     </div>

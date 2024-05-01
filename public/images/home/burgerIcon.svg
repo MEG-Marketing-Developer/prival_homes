@@ -1,0 +1,34 @@
+<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.656"
+                      height="11.716"
+                      viewBox="0 0 17.656 11.716"
+                    >
+                      <g
+                        id="Group_257"
+                        data-name="Group 257"
+                        transform="translate(-373.462 -32.402)"
+                      >
+                        <path
+                          id="Path_60"
+                          data-name="Path 60"
+                          d="M1205.458,102.228q-3.82,0-7.639,0-4.172,0-8.344,0l1.642,2.3c2.664,0,3.694,0,6.358,0h9.655Z"
+                          transform="translate(-816.013 -65.12)"
+                          fill="#141414"
+                        />
+                        <path
+                          id="Path_61"
+                          data-name="Path 61"
+                          d="M1214.453,89.93c-1.516,0-2.943,0-4.46,0h-1.625c-1.021,0-3.263-.007-4.284,0l1.454,2.314h10.567Z"
+                          transform="translate(-825.034 -57.525)"
+                          fill="#141414"
+                        />
+                        <path
+                          id="Path_62"
+                          data-name="Path 62"
+                          d="M1200.841,114.488c-3,0-8.248,0-11.246,0l1.56,2.315c1.517,0,1.417,0,2.933,0h2.221c.822,0,5.358.007,6.179,0Z"
+                          transform="translate(-816.087 -72.69)"
+                          fill="#141414"
+                        />
+                      </g>
+                    </svg>

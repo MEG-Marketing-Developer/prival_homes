@@ -27,14 +27,14 @@ const BookingPage = () => {
           <p className="text-sm lg:text-lg">
             Mon, 25 Mar 2023 to Wed, 28 Mar 2023 (3 Days)
           </p>
-          <p className="text-xs lg:text-lg flex items-center gap-2">
-            <p className=" flex items-center">
+          <div className="text-xs lg:text-lg flex items-center gap-2">
+            <span className=" flex items-center">
               Checkin <MdKeyboardArrowRight /> 14:00 |
-            </p> 
-            <p className=" flex items-center">
+            </span> 
+            <span className=" flex items-center">
                Checkout <MdKeyboardArrowRight /> 12:00
-            </p>
-          </p>
+            </span>
+          </div>
         </div>
         <span className="text-xs lg:text-lg">AED 1400,00</span>
       </div>
@@ -63,9 +63,10 @@ const BookingPage = () => {
         <p>Total</p>
         <p>AED 2,220.00</p>
       </div>
-      <p className="divider m-0 p-0"></p>
 
-      <h1 className="main-color text-lg lg:text-2xl xl:text-5xl  font-blissful tracking-widest mt-4">
+      <p className="divider m-0 p-0"></p>
+      
+      <h1 className="main-color text-lg lg:text-2xl xl:text-5xl  font-blissful tracking-widest mt-10">
         Payment Details
       </h1>
       <div className="flex justify-between items-center mt-8">
@@ -75,6 +76,7 @@ const BookingPage = () => {
         </div>
         <span>AED 2,220.00</span>
       </div>
+      <p className="divider h-20"></p>
       <div className="mt-10">
         <div className="flex justify-between items-center ">
           <h1 className="text-lg lg:text-4xl font-blissful main-color tracking-widest lg:mb-6">

@@ -16,7 +16,10 @@ const User = ({ onTranslate }) => {
         </p>
         <div className="flex items-center justify-center lg:justify-end ">
           <div className="flex space-x-[18px]">
-            <div className="w-[80px] h-[80px] lg:w-52 lg:h-52 bg-[#E7E7E7] rounded-xl">
+            <Link
+              href={"/change-profile"}
+              className="w-[80px] h-[80px] lg:w-52 lg:h-52 bg-[#E7E7E7] rounded-xl"
+            >
               <div className="flex justify-center items-center  mt-[23px] lg:mt-[48px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +53,8 @@ const User = ({ onTranslate }) => {
               <p className="flex justify-center items-center font-blissful text-[10px] lg:text-[21px] text-[#333333]">
                 My Profile
               </p>
-            </div>
+            </Link>
+
             <Link
               onClick={() => onTranslate(false)}
               href={"/user-bookings"}
@@ -125,7 +129,11 @@ const User = ({ onTranslate }) => {
                 Bookings
               </div>
             </Link>
-            <div className="w-[80px] h-[80px] lg:w-52 lg:h-52 bg-[#E7E7E7] rounded-xl">
+            <Link
+              onClick={() => onTranslate(false)}
+              href={"/user-wishlist"}
+              className="w-[80px] h-[80px] lg:w-52 lg:h-52 bg-[#E7E7E7] rounded-xl"
+            >
               <div className="flex justify-center items-center mt-[23px] lg:mt-[48px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +157,7 @@ const User = ({ onTranslate }) => {
               <p className="flex justify-center items-center font-blissful text-[10px] lg:text-[21px] text-[#333333]">
                 Wishlist
               </p>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="mt-10 text-[12px] lg:text-[30px] text-[#1A1A1A] font-blissful flex justify-end lg:justify-start underline">

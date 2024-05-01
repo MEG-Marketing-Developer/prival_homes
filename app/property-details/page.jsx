@@ -71,7 +71,7 @@ const PropertyDetailsPage = () => {
   return (
     <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] py-10">
       <div>
-        <p className="flex space-x-1 items-center lg:mb-4 mb-2 font-blissful lg:text-2xl text-[9px]">
+        <div className="flex space-x-1 items-center lg:mb-4 mb-2 font-blissful lg:text-2xl text-[9px]">
           <span>Home</span>
           <span>
             <MdKeyboardArrowRight />
@@ -81,7 +81,7 @@ const PropertyDetailsPage = () => {
             <MdKeyboardArrowRight />
           </span>
           <span>Sky-High Living at The Palm Tower - St. Regis</span>
-        </p>
+        </div>
         <div className=" carousel w-full ">
           {items.map((item, index) => (
             <div
@@ -109,7 +109,6 @@ const PropertyDetailsPage = () => {
           </span>
           <span
             onClick={prevItem}
-            left
             className="absolute cursor-pointer opacity-90 lg:top-[70px] top-[50px] lg:-left-4 -left-2  transform -translate-y-10 lg:-translate-y-6 z-20 rounded-full flex justify-center items-center main-color-bg  w-5 h-5 lg:w-20 lg:h-20"
           >
             <MdKeyboardArrowLeft
@@ -135,7 +134,7 @@ const PropertyDetailsPage = () => {
       </div>
       <div className="bg-[#E1E1E1]  rounded-md flex flex-col mt-6 lg:mt-11 lg:py-16 lg:px-16 px-6 py-6 ">
         <div className="grid grid-cols-3 justify-items-center ">
-          <p className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={bed}
               alt="bed"
@@ -147,82 +146,82 @@ const PropertyDetailsPage = () => {
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-3"
             />{" "}
             1 twin single bed
-          </p>
-          <p className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+          </div>
+          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={bed}
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />{" "}
             2 king size bed
-          </p>
-          <p className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+          </div>
+          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={bathroom}
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />{" "}
             3 bathrooms
-          </p>
+          </div>
         </div>
         <div className="grid grid-cols-4 justify-items-start lg:mt-16 mt-8">
-          <p className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={floor}
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />
             25th Floor
-          </p>
-          <p className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+          </div>
+          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={spm}
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />{" "}
             30 sqm
-          </p>
-          <p className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+          </div>
+          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={walk}
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />
             30 mins walk
-          </p>
-          <p className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+          </div>
+          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={persons}
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />
             1 adult, 3 Children
-          </p>
+          </div>
         </div>
       </div>
       <div className="flex mt-16 justify-between lg:justify-start items-center flex-wrap">
         <div className="flex lg:flex-col text-[18px] lg:text-[50px] tracking-wider ">
           <div>
-            <p className="flex font-blissful flex-col lg:flex-row">
+            <div className="flex font-blissful flex-col lg:flex-row">
               AED 1200{" "}
               <span className="text-[12px] lg:text-[35px] ml-20 -mt-4 lg:ml-1 lg:mt-4">
                 /3 Days
               </span>
               <p className="hidden lg:flex ml-5 divider lg:divider-horizontal lg:h-20"></p>
-            </p>
-            <p className="text-[#535353] text-[12px] lg:text-[24px] lg:mt-2 italic">
+            </div>
+            <div className="text-[#535353] text-[12px] lg:text-[24px] lg:mt-2 italic">
               AED 400 Per Night
-            </p>
+            </div>
           </div>
           <div className="lg:hidden flex gap-3 lg:gap-0 ml-6 lg:ml-0 ">
             <div className="text-[10px] relative border border-[#141414] flex items-center justify-center px-2 h-10 lg:px-6 lg:h-16 rounded-md lg:mr-5 ">
-              <p className="absolute -top-3 left-5 px-1 bg-white text-sm">
+              <div className="absolute -top-3 left-5 px-1 bg-white text-sm">
                 FROM
-              </p>
+              </div>
               25/03/2023
             </div>
             <div className="text-[10px] relative border border-[#141414] flex items-center justify-center px-2 h-10 lg:px-6 lg:h-16  rounded-md lg:mr-10">
-              <p className="absolute -top-3 left-5 px-1 bg-white text-sm">TO</p>
+              <span className="absolute -top-3 left-5 px-1 bg-white text-sm">TO</span>
               28/03/2023
             </div>
           </div>
@@ -230,15 +229,15 @@ const PropertyDetailsPage = () => {
         <div>
           <div className="hidden lg:flex lg:ml-10">
             <div className="text-xl relative border border-[#141414] flex items-center justify-center  lg:px-6 lg:h-16 rounded-md lg:mr-5 ">
-              <p className="absolute -top-3 left-5 px-1 bg-white text-sm lg:text-lg">
+              <div className="absolute -top-3 left-5 px-1 bg-white text-sm lg:text-lg">
                 FROM
-              </p>
+              </div>
               25/03/2023
             </div>
             <div className="text-xl relative border border-[#141414] flex items-center justify-center  lg:px-6 lg:h-16   rounded-md lg:mr-10">
-              <p className="absolute -top-3 left-5 px-1 bg-white text-sm lg:text-lg">
+              <div className="absolute -top-3 left-5 px-1 bg-white text-sm lg:text-lg">
                 TO
-              </p>
+              </div>
               28/03/2023
             </div>
             <Link href={"/book-summary"}>
