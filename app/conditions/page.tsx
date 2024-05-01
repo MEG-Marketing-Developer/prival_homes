@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import hero from "@/public/images/home/hero.svg";
 
-const conditions = () => {
+const ConditionsPage = () => {
   return (
     <div className="container mx-auto mt-10 ">
       <div
@@ -180,4 +180,4 @@ const conditions = () => {
   );
 };
 
-export default conditions;
+export default ConditionsPage;

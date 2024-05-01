@@ -1,8 +1,15 @@
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import React from "react";
 
-const User = () => {
+const User = ({ onTranslate }) => {
+  const pathname = usePathname();
+
   return (
-    <div className="bg-[#F7F7F7] login-clip-path">
+    <div
+      className={`bg-[#F7F7F7] login-clip-path ${pathname != "/" && "-mt-9"}`}
+    >
       <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] py-14 lg:py-20  px-4">
         <p className="flex lg:justify-end font-blissful lg:text-4xl mb-10 lg:mb-20 main-color">
           Hello Rashed,
@@ -44,7 +51,11 @@ const User = () => {
                 My Profile
               </p>
             </div>
-            <div className="w-[80px] h-[80px] lg:w-52 lg:h-52 bg-[#E7E7E7] rounded-xl">
+            <Link
+              onClick={() => onTranslate(false)}
+              href={"/user-bookings"}
+              className="w-[80px] h-[80px] lg:w-52 lg:h-52 bg-[#E7E7E7] rounded-xl"
+            >
               <div className="flex justify-center items-center mt-[23px] lg:mt-[48px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,10 +121,10 @@ const User = () => {
                   </g>
                 </svg>
               </div>
-              <p className="flex justify-center items-center font-blissful text-[10px] lg:text-[21px] text-[#333333]">
+              <div className="flex justify-center items-center font-blissful text-[10px] lg:text-[21px] text-[#333333]">
                 Bookings
-              </p>
-            </div>
+              </div>
+            </Link>
             <div className="w-[80px] h-[80px] lg:w-52 lg:h-52 bg-[#E7E7E7] rounded-xl">
               <div className="flex justify-center items-center mt-[23px] lg:mt-[48px]">
                 <svg

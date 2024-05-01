@@ -1,7 +1,7 @@
 import React from "react";
 import aboutImg from "@/public/images/aboutUs/about-us.svg";
 import Image from "next/image";
-const AboutUs = () => {
+const AboutUsPage = () => {
   return (
     <div className="bg-white mb-40 sm:px-8">
       <div className="container mx-auto sm:px-[90px] 2xl:px-[160px]">
@@ -49,4 +49,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUsPage;

@@ -3,12 +3,13 @@ import NavBar from "./components/NavBar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { AOSInit } from "./aos";
+
 export const metadata: Metadata = {
   title: "Prival Homes",
   description: "Booking Now",
-  // icons:{
-  //   icon:"@/public/images/navBar/logo.svg"
-  // }
+  icons: {
+    icon: "/images/navBar/logo.svg",
+  },
 };
 
 export default function RootLayout({

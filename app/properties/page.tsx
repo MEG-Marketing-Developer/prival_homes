@@ -9,7 +9,7 @@ import prop2 from "@/public/images/properties/prop2.svg";
 import prop3 from "@/public/images/properties/prop3.svg";
 import prop4 from "@/public/images/properties/prop4.svg";
 import Link from "next/link";
-const Properties = () => {
+const PropertiesPage = () => {
   return (
     <div className="bg-white">
       <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] mt-10">
@@ -355,4 +355,4 @@ const Properties = () => {
   );
 };
 
-export default Properties;
+export default PropertiesPage;

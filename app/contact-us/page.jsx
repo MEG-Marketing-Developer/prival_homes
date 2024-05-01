@@ -4,7 +4,7 @@ import React, { ChangeEvent, useRef, useState } from "react";
 import useAlert from "../hooks/useAlert";
 import Alert from "@/app/components/Alert";
 
-const ContactUs = () => {
+const ContactUsPage = () => {
   const [form, setForm] = useState({
     FirstName: "",
     LastName: "",
@@ -179,4 +179,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUsPage;

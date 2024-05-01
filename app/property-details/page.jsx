@@ -20,7 +20,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const PropertyDetails = () => {
+const PropertyDetailsPage = () => {
   const router = useRouter();
   const items = [
     { name: "item1", img: prop1, alt: "prop1" },
@@ -236,23 +236,33 @@ const PropertyDetails = () => {
               25/03/2023
             </div>
             <div className="text-xl relative border border-[#141414] flex items-center justify-center  lg:px-6 lg:h-16   rounded-md lg:mr-10">
-              <p className="absolute -top-3 left-5 px-1 bg-white text-sm lg:text-lg">TO</p>
+              <p className="absolute -top-3 left-5 px-1 bg-white text-sm lg:text-lg">
+                TO
+              </p>
               28/03/2023
             </div>
-            <button className="hidden lg:block text-2xl rounded-full px-28 py-5 main-color-bg text-white font-blissful tracking-widest ">
-              Book
-            </button>
+            <Link href={"/book-summary"}>
+              <button className="hidden lg:block text-2xl rounded-full px-28 py-5 main-color-bg text-white font-blissful tracking-widest ">
+                Book
+              </button>
+            </Link>
           </div>
           <div className="flex lg:block justify-center items-center gap-4 my-8">
-          <button className="lg:hidden  text-xs rounded-full px-14 py-3  main-color-bg text-white font-blissful tracking-widest ">
-            Book
-          </button>
-          <div className="flex lg:justify-end lg:mt-6  ">
-            <button className="text-[12px] lg:text-[20px] font-blissful tracking-widest rounded-xl flex border border-[#262626] pl-4 lg:pl-8  h-10 pt-2 lg:py-12 lg:pt-5 px-6 lg:px-10">
-              save as wishlist{" "}
-              <Image src={heart} alt="heart" className="w-4 ml-3 lg:ml-6 mt-1 " />
-            </button>
-          </div>
+            <Link href={"/book-summary"}>
+              <button className="lg:hidden  text-xs rounded-full px-14 py-3  main-color-bg text-white font-blissful tracking-widest ">
+                Book
+              </button>
+            </Link>
+            <div className="flex lg:justify-end lg:mt-6  ">
+              <button className="text-[12px] lg:text-[20px] font-blissful tracking-widest rounded-xl flex border border-[#262626] pl-4 lg:pl-8  h-10 pt-2 lg:py-12 lg:pt-5 px-8 lg:px-10">
+                Save as wishlist
+                <Image
+                  src={heart}
+                  alt="heart"
+                  className="w-4 lg:w-6 ml-3 lg:ml-6 mt-1 "
+                />
+              </button>
+            </div>
           </div>
         </div>
         <div className="mt-5 ">
@@ -347,16 +357,24 @@ const PropertyDetails = () => {
             Location
           </h1>
           <button className="text-xs lg:text-[26px]  justify-center items-center  text-white font-blissful tracking-widest rounded-xl flex border main-color-bg lg:pl-6 py-1 lg:py-3 px-4 lg:px-9 ">
-            <Image src={google} alt="heart" className="w-5  mr-4 lg:mr-8 lg:w-10" />
+            <Image
+              src={google}
+              alt="heart"
+              className="w-5  mr-4 lg:mr-8 lg:w-10"
+            />
             view on google
           </button>
         </div>
         <div>
-          <Image src={map} alt="heart" className="object-cover mt-8 h-40 lg:h-80" />
+          <Image
+            src={map}
+            alt="heart"
+            className="object-cover mt-8 h-40 lg:h-80"
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default PropertyDetails;
+export default PropertyDetailsPage;

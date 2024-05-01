@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import hero from "@/public/images/home/hero.svg";
 
-const page = () => {
+const PrivacyPolicyPage = () => {
   return (
     <div className="container mx-auto  mt-10">
       <div
@@ -156,4 +156,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default PrivacyPolicyPage;

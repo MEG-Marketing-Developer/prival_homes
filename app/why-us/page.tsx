@@ -4,7 +4,7 @@ import whyUs1 from "@/public/images/whyUs/whyUs1.svg";
 import whyUs2 from "@/public/images/whyUs/whyUs2.svg";
 import whyUs3 from "@/public/images/whyUs/whyUs3.svg";
 import whyUs4 from "@/public/images/whyUs/whyUs4.svg";
-const WhyUs = () => {
+const WhyUsPage = () => {
   return (
     <div className="bg-white">
       <div className="container mx-auto my-20 sm:px-[90px] 2xl:px-[160px]">
@@ -145,4 +145,4 @@ const WhyUs = () => {
   );
 };
 
-export default WhyUs;
+export default WhyUsPage;
