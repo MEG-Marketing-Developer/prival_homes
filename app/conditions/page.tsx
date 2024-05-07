@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import hero from "@/public/images/home/hero.svg";
+import visa1 from "@/public/images/conditions/mastercard.jpg";
+import visa2 from "@/public/images/conditions/visa1.png";
+import visa3 from "@/public/images/conditions/verfiedBy.jpg";
 
 const ConditionsPage = () => {
   return (
@@ -66,6 +69,38 @@ const ConditionsPage = () => {
             secure online payment methods. We do not store credit card details
             nor do we share financial information with third parties.
           </p>
+          <p className="mt-4">
+            We accept payments online using Visa and MasterCard credit/debit
+            card in AED (or any other agreed currency)”. The logo of the
+            accepted cards are to be mentioned on their Home page and on their
+            Payment check out page.
+          </p>
+        </div>
+        <div className=" py-4">
+          <h4 className="main-color mt-2 mb-4  text-[20px] sm:text-3xl">
+            Method of Payment, Card Types accepted and Currency:
+          </h4>
+          <p className="mt-4">
+            We accept payments online using Visa and MasterCard credit/debit
+            card in AED (or any other agreed currency)”. The logo of the
+            accepted cards are to be mentioned on their Home page and on their
+            Payment check out page.
+          </p>
+          <div className="flex gap-8 mt-4">
+            <div className="relative w-20 h-20">
+              <Image src={visa1} alt="visa" fill className="object-cover " />
+            </div>
+            <div className="relative w-20 h-20">
+              <Image
+                src={visa2}
+                alt="visa"
+                className="object-cover pt-[27px] "
+              />
+            </div>
+            <div className="relative w-20 h-20">
+              <Image src={visa3} alt="visa" fill className="object-cover " />
+            </div>
+          </div>
         </div>
         <div className=" py-4">
           <h4 className="main-color mt-2 mb-4  text-[20px] sm:text-3xl">
@@ -78,6 +113,19 @@ const ConditionsPage = () => {
             cancellations are subject to the terms of the cancellation policy.
             Prival reserves the right to withhold a portion or all of the
             booking amount in accordance with the policy.
+          </p>
+          <p className="mt-4">
+            Refunds will be done only through the Original Mode of Payment
+          </p>
+        </div>
+        <div className=" py-4">
+          <h4 className="main-color mt-2 mb-4  text-[20px] sm:text-3xl">
+            Delivery, Shipping and Services Policy:
+          </h4>
+          <p>
+            (Website) will NOT deal or provide any services or products to any
+            of OFAC (Office of Foreign Assets Control) sanctions countries in
+            accordance with the law of UAE
           </p>
         </div>
         <div className=" py-4">

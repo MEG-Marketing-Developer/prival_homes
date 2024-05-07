@@ -8,7 +8,7 @@ import { useState } from "react";
 const Login = ({onLoginSuccess}) => {
   const [signUPbtn, setSignUpbtn] = useState(false);
 
-  const [loginForm, setLoginForm] = useState({ email: "", password: "" ,osos:"" });
+  const [loginForm, setLoginForm] = useState({ email: "", password: "" });
   const handleLoginFormSubmit = (e) => {
     e.preventDefault();
     // HANDLE FORM SUBMISSION
