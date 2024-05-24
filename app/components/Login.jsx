@@ -4,18 +4,25 @@ import Link from "next/link";
 import googleLogo from "../../public/images/propertyDetails/icons/googlelogo.svg";
 import apple from "../../public/images/propertyDetails/icons/apple.svg";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useEffect } from 'react';
+import { useAuth} from '../contexts/AuthContext';
+import { getAuthToken } from '../rms/rmsApi';
 
-const Login = ({onLoginSuccess}) => {
+
+const Login = ({ onLoginSuccess }) => {
+
+  const { register, handleSubmit, formState = { errors } } = useForm();
+
+
   const [signUPbtn, setSignUpbtn] = useState(false);
-
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
   const handleLoginFormSubmit = (e) => {
     e.preventDefault();
     // HANDLE FORM SUBMISSION
     console.log(loginForm);
-    onLoginSuccess(signUPbtn)
+    onLoginSuccess(signUPbtn);
   };
-
   const [registerForm, setRegisterForm] = useState({
     fullName: "",
     email: "",
@@ -26,18 +33,46 @@ const Login = ({onLoginSuccess}) => {
     password: "",
     rePassword: "",
   });
-
   const handleRegisterFormSubmit = (e) => {
     e.preventDefault();
     // HANDLE FORM SUBMISSION
     console.log(registerForm);
-    onLoginSuccess(false)
-    setSignUpbtn(false)
+    onLoginSuccess(false);
+    setSignUpbtn(false);
   };
+
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  const { setAuthToken } = useAuth();
+
+  useEffect(() => {
+    const fetchAndSetAuthToken = async () => {
+      try {
+        const tokenData = await getAuthToken();
+        console.log(tokenData)
+        // setAuthToken(tokenData.token);
+      } catch (error) {
+        console.error('Error fetching auth token:OsOs', error);
+      }
+    };
+
+    fetchAndSetAuthToken();
+  }, [setAuthToken]);
+
+
+
+
+
+
+
+
   return (
     <>
       {!signUPbtn ? (
-        <form onSubmit={handleLoginFormSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col">
             <h1 className="xl:text-5xl font-blissful tracking-widest mb-14 main-color">
               Login
@@ -45,11 +80,9 @@ const Login = ({onLoginSuccess}) => {
             <div className="flex gap-20 justify-center items-center self-center mb-8">
               <label className="text-3xl font-bold">Email</label>
               <input
-                onChange={(e) =>
-                  setLoginForm({ ...loginForm, email: e.currentTarget.value })
-                }
+                {...register("email")}
                 required
-                name="email"
+                id="email"
                 type="Email"
                 className="input input-bordered grow w-full min-w-[500px]"
               />
@@ -57,14 +90,9 @@ const Login = ({onLoginSuccess}) => {
             <div className="flex gap-6 justify-center items-center self-center">
               <label className="text-3xl font-bold">Password</label>
               <input
-                onChange={(e) =>
-                  setLoginForm({
-                    ...loginForm,
-                    password: e.currentTarget.value,
-                  })
-                }
+                {...register("password")}
                 required
-                name="password"
+                id="password"
                 type="password"
                 className="input input-bordered grow w-full min-w-[500px]"
               />

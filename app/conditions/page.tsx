@@ -71,7 +71,7 @@ const ConditionsPage = () => {
           </p>
           <p className="mt-4">
             We accept payments online using Visa and MasterCard credit/debit
-            card in AED (or any other agreed currency)”. The logo of the
+            card in AED . The logo of the
             accepted cards are to be mentioned on their Home page and on their
             Payment check out page.
           </p>
@@ -82,7 +82,7 @@ const ConditionsPage = () => {
           </h4>
           <p className="mt-4">
             We accept payments online using Visa and MasterCard credit/debit
-            card in AED (or any other agreed currency)”. The logo of the
+            card in AED. The logo of the
             accepted cards are to be mentioned on their Home page and on their
             Payment check out page.
           </p>
@@ -123,7 +123,7 @@ const ConditionsPage = () => {
             Delivery, Shipping and Services Policy:
           </h4>
           <p>
-            (Website) will NOT deal or provide any services or products to any
+            The Prival will NOT deal or provide any services or products to any
             of OFAC (Office of Foreign Assets Control) sanctions countries in
             accordance with the law of UAE
           </p>

@@ -14,7 +14,9 @@ const NavBar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [profileIsOpen, setProfileOpen] = useState(false);
+  const user = false;
 
+  
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -148,23 +150,29 @@ const NavBar = () => {
                 >
                   CONTACT US
                 </Link>
-                <span
-                  onClick={toggleProfile}
-                  className="inline-flex justify-center items-center align-middle xl:gap-1 cursor-pointer"
-                >
-                  <Image src={profile} alt="profile" className="w-6 2xl:w-7" />
-                  {profileIsOpen ? (
-                    <IoIosArrowDown
-                      color="green"
-                      className="text-lg xl:text-xl "
+                {user && (
+                  <span
+                    onClick={toggleProfile}
+                    className="inline-flex justify-center items-center align-middle xl:gap-1 cursor-pointer"
+                  >
+                    <Image
+                      src={profile}
+                      alt="profile"
+                      className="w-6 2xl:w-7"
                     />
-                  ) : (
-                    <IoIosArrowForward
-                      color="green"
-                      className="text-lg xl:text-xl"
-                    />
-                  )}
-                </span>
+                    {profileIsOpen ? (
+                      <IoIosArrowDown
+                        color="green"
+                        className="text-lg xl:text-xl "
+                      />
+                    ) : (
+                      <IoIosArrowForward
+                        color="green"
+                        className="text-lg xl:text-xl"
+                      />
+                    )}
+                  </span>
+                )}
               </nav>
             </div>
           </section>
