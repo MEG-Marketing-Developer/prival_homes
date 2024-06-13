@@ -69,12 +69,6 @@ const ConditionsPage = () => {
             secure online payment methods. We do not store credit card details
             nor do we share financial information with third parties.
           </p>
-          <p className="mt-4">
-            We accept payments online using Visa and MasterCard credit/debit
-            card in AED . The logo of the
-            accepted cards are to be mentioned on their Home page and on their
-            Payment check out page.
-          </p>
         </div>
         <div className=" py-4">
           <h4 className="main-color mt-2 mb-4  text-[20px] sm:text-3xl">
@@ -82,9 +76,7 @@ const ConditionsPage = () => {
           </h4>
           <p className="mt-4">
             We accept payments online using Visa and MasterCard credit/debit
-            card in AED. The logo of the
-            accepted cards are to be mentioned on their Home page and on their
-            Payment check out page.
+            card in AED.
           </p>
           <div className="flex gap-8 mt-4">
             <div className="relative w-20 h-20">

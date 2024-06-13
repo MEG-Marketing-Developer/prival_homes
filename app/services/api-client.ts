@@ -1,5 +1,5 @@
 import axios from "axios";
 
-axios.create({
-    baseURL:"https://restapi12.rmscloud.com", 
+export default axios.create({
+    baseURL:"https://app8.rmscloud.com", 
 })

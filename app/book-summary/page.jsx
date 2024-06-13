@@ -5,10 +5,12 @@ import prop4 from "@/public/images/propertyDetails/propDetails4.png";
 import questionMark from "@/public/images/propertyDetails/icons/questionMark.svg";
 import Link from "next/link";
 import Login from "@/app/components/Login";
-
+import visa1 from "@/public/images/conditions/mastercard.jpg";
+import visa2 from "@/public/images/conditions/visa1.png";
+import visa3 from "@/public/images/conditions/verfiedBy.jpg";
 const BookSummaryPage = () => {
-    const [login, setLogin] = useState(false);
-    const [details, setDetails] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [details, setDetails] = useState(false);
   return (
     <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] py-10">
       <div className="max-w-2xl">
@@ -138,13 +140,51 @@ const BookSummaryPage = () => {
           </div>
         </div>
       )}
-      {login && <Login onLoginSuccess={(success) =>{
-         setLogin(success)
-         setDetails(true)
-         }} />}
+      {login && (
+        <Login
+          onLoginSuccess={(success) => {
+            setLogin(success);
+            setDetails(true);
+          }}
+        />
+      )}
       {details && (
         <>
           <div>
+            <div className="">
+              <h2
+                data-aos="fade-down"
+                className="main-color text-lg md:text-3xl mb-10 sm:mb-10 font-blissful tracking-[3px]"
+              >
+                Method of Payment, Card Types accepted and Currency:
+              </h2>
+              <div className="flex gap-8 mt-4">
+                <div className="relative w-20 h-20">
+                  <Image
+                    src={visa1}
+                    alt="visa"
+                    fill
+                    className="object-cover "
+                  />
+                </div>
+                <div className="relative w-20 h-20">
+                  <Image
+                    src={visa2}
+                    alt="visa"
+                    className="object-cover pt-[27px] "
+                  />
+                </div>
+                <div className="relative w-20 h-20">
+                  <Image
+                    src={visa3}
+                    alt="visa"
+                    fill
+                    className="object-cover "
+                  />
+                </div>
+              </div>
+              <p className=" divider h-10"></p>
+            </div>
             <h1 className="text-2xl xl:text-4xl font-blissful tracking-widest mb-10">
               Fill in your details
             </h1>
@@ -203,6 +243,6 @@ const BookSummaryPage = () => {
       )}
     </div>
   );
-}
+};
 
-export default BookSummaryPage
+export default BookSummaryPage;

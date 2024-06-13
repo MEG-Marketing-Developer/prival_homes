@@ -1,3 +1,4 @@
+"use client";
 import User from "./components/User";
 import Link from "next/link";
 import Image from "next/image";
@@ -35,7 +36,37 @@ import hosting_5 from "@/public/images/home/our-coalition/SK.svg";
 import hosting_6 from "@/public/images/home/our-coalition/SSS.svg";
 
 import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
+import axios from "axios";
+import useCredentials from "../app/hooks/useCredentials";
+import { useEffect } from "react";
+
+import visa1 from "@/public/images/conditions/mastercard.jpg";
+import visa2 from "@/public/images/conditions/visa1.png";
+import visa3 from "@/public/images/conditions/verfiedBy.jpg";
 export default function Home() {
+  // useEffect(() => {
+  //   axios
+  //     .post(
+  //       "https://restapi12.rmscloud.com/authToken",
+  //       {
+  //         agentId: 15,
+  //         agentPassword: "1h&29$vk449f8",
+  //         clientId: 11281,
+  //         clientPassword: "6k!Dp$N4",
+  //         useTrainingDatabase: false,
+  //         moduleType: ["distribution"],
+  //       },
+  //       {
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           setAccept: "application/json",
+  //         },
+  //       }
+  //     )
+  //     .then((res) => console.log(res))
+  //     .catch((err) => console.log(err));
+  // }, []);
+
   const items_1 = [
     { image: hosting1 },
     { image: hosting2 },
@@ -375,6 +406,29 @@ export default function Home() {
               direction="right"
               speed="slow"
             />
+          </div>
+          <div className="">
+            <h2
+              data-aos="fade-down"
+              className="main-color text-lg md:text-3xl mb-10 sm:mb-10 font-blissful tracking-[3px]"
+            >
+              Method of Payment, Card Types accepted and Currency:
+            </h2>
+            <div className="flex gap-8 mt-4">
+              <div className="relative w-20 h-20">
+                <Image src={visa1} alt="visa" fill className="object-cover " />
+              </div>
+              <div className="relative w-20 h-20">
+                <Image
+                  src={visa2}
+                  alt="visa"
+                  className="object-cover pt-[27px] "
+                />
+              </div>
+              <div className="relative w-20 h-20">
+                <Image src={visa3} alt="visa" fill className="object-cover " />
+              </div>
+            </div>
           </div>
         </div>
       </div>

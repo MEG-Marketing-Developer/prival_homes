@@ -5,15 +5,10 @@ import googleLogo from "../../public/images/propertyDetails/icons/googlelogo.svg
 import apple from "../../public/images/propertyDetails/icons/apple.svg";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useEffect } from 'react';
-import { useAuth} from '../contexts/AuthContext';
-import { getAuthToken } from '../rms/rmsApi';
-
 
 const Login = ({ onLoginSuccess }) => {
 
   const { register, handleSubmit, formState = { errors } } = useForm();
-
 
   const [signUPbtn, setSignUpbtn] = useState(false);
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
@@ -41,33 +36,9 @@ const Login = ({ onLoginSuccess }) => {
     setSignUpbtn(false);
   };
 
-
   const onSubmit = (data) => {
     console.log(data);
   };
-
-  const { setAuthToken } = useAuth();
-
-  useEffect(() => {
-    const fetchAndSetAuthToken = async () => {
-      try {
-        const tokenData = await getAuthToken();
-        console.log(tokenData)
-        // setAuthToken(tokenData.token);
-      } catch (error) {
-        console.error('Error fetching auth token:OsOs', error);
-      }
-    };
-
-    fetchAndSetAuthToken();
-  }, [setAuthToken]);
-
-
-
-
-
-
-
 
   return (
     <>
