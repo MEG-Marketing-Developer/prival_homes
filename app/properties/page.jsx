@@ -234,7 +234,7 @@ console.log(data.name)
           {data.map(item => (
             <div key={item.id}
               data-aos="fade-up"
-              className="relative shadow-md max-w-[25rem] w-[23rem]"
+              className="relative shadow-md max-w-[25rem] w-[21rem]"
               >
               <figure
                 onClick={addToWishlist}
