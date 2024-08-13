@@ -18,7 +18,6 @@ const PropertiesPage = () => {
   const [imageUrl, setImageUrl] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-console.log(data.name)
   const addToWishlist = () => {
     // handle create a new wishlist for that user
     setAddInWishlist(!inWishlist);
@@ -242,7 +241,7 @@ console.log(data.name)
               >
                 {inWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
               </figure>
-              <Link href={"/property-details"}>
+              <Link href={`/properties/${item.id}`}>
                 <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
                   <Image
                     src={imageUrl ? imageUrl : prop1}
