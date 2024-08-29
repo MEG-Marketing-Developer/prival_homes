@@ -8,9 +8,11 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdBedroomParent } from "react-icons/md";
 import map from "@/public/images/properties/map.svg";
 import prop1 from "@/public/images/properties/prop1.svg";
-import prop2 from "@/public/images/properties/prop2.svg";
-import prop3 from "@/public/images/properties/prop3.svg";
-import prop4 from "@/public/images/properties/prop4.svg";
+import act from "@/public/images/properties/ACTII.PNG";
+import merano from "@/public/images/properties/Merano.jpeg";
+import prive from "@/public/images/properties/Prive.jpg";
+import waves from "@/public/images/properties/Waves.jpg";
+import west from "@/public/images/properties/west.jpg";
 import Link from "next/link";
 const PropertiesPage = () => {
   const [inWishlist, setAddInWishlist] = useState(false);
@@ -22,6 +24,9 @@ const PropertiesPage = () => {
     // handle create a new wishlist for that user
     setAddInWishlist(!inWishlist);
   };
+
+  const Images = [prive, west, act , merano , prop1 ,  waves]
+  // console.log(Images, "Images")
   useEffect(() => {
     axios.get("/api/get-properties")
       .then((response) => {
@@ -34,6 +39,9 @@ const PropertiesPage = () => {
         setLoading(false);
       });
   }, []);
+  // const idArray = data.map(item => item.id);
+  //       console.log(idArray)
+  //       console.log(Array.isArray(idArray))  
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
@@ -244,7 +252,7 @@ const PropertiesPage = () => {
               <Link href={`/properties/${item.id}`}>
                 <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
                   <Image
-                    src={imageUrl ? imageUrl : prop1}
+                    src= {Images[item.id % Images.length]}
                     fill
                     alt="properties"
                     className="object-cover rounded-xl"
