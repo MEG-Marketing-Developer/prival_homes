@@ -249,7 +249,7 @@ const PropertiesPage = () => {
               >
                 {inWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
               </figure>
-              <Link href={`/properties/${item.id}`}>
+              <Link href={`/${item.name.replace(/\s+/g, '').replace(/–/g, "-").toLowerCase()}`}>
                 <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
                   <Image
                     src= {Images[item.id % Images.length]}
