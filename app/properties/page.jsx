@@ -16,13 +16,21 @@ import west from "@/public/images/properties/west.jpg";
 import Link from "next/link";
 const PropertiesPage = () => {
   const [inWishlist, setAddInWishlist] = useState(false);
+  const [wishlist, setWishlist] = useState([]);
+
   const [data, setData] = useState([]);
   const [imageUrl, setImageUrl] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const addToWishlist = () => {
-    // handle create a new wishlist for that user
-    setAddInWishlist(!inWishlist);
+  const addToWishlist = (id) => {
+    // Check if the item is already in the wishlist
+    if (wishlist.includes(id)) {
+      // Remove from wishlist
+      setWishlist(wishlist.filter((itemId) => itemId !== id));
+    } else {
+      // Add to wishlist
+      setWishlist([...wishlist, id]);
+    }
   };
 
   const Images = [prive, west, act , merano , prop1 ,  waves]
@@ -243,12 +251,16 @@ const PropertiesPage = () => {
               data-aos="fade-up"
               className="relative shadow-md max-w-[25rem] w-[21rem]"
               >
-              <figure
-                onClick={addToWishlist}
-                className="absolute text-4xl right-6 top-7 z-40 cursor-pointer"
-              >
-                {inWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
-              </figure>
+               <figure
+            onClick={() => addToWishlist(item.id)}
+            className="absolute text-4xl right-6 top-7 z-40 cursor-pointer"
+          >
+            {wishlist.includes(item.id) ? (
+              <FaHeart color="red" />
+            ) : (
+              <FaRegHeart />
+            )}
+          </figure>
               <Link href={`/${item.name.replace(/\s+/g, '').replace(/–/g, "-").toLowerCase()}`}>
                 <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
                   <Image
@@ -281,7 +293,12 @@ const PropertiesPage = () => {
                     </span>
                   </div>
                 </div>
-                <h4 className=" mt-5 text-xs lg:text-lg">AED 700.00 /Night</h4>
+                {/* <h4 className=" mt-5 text-xs lg:text-lg">AED 700.00 /Night</h4> */}
+                <Link href={`/${item.name.replace(/\s+/g, '').replace(/–/g, "-").toLowerCase()}`}>
+                <button className="px-8 py-2 text-white mt-10 tracking-[3px] rounded-full main-color-bg uppercase">
+                  Book Now
+                 </button>
+                 </Link>
               </div>
             </div>
           ))}
