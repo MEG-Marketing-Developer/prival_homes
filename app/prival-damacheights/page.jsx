@@ -240,14 +240,14 @@ const privalDamacHeights = () => {
               </div>
               28/03/2023
             </div>
-            <Link href={"/book-summary"}>
+            <Link href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Prive!" target="_blank">
               <button className="hidden lg:block text-2xl rounded-full px-28 py-5 main-color-bg text-white font-blissful tracking-widest ">
                 Book
               </button>
             </Link>
           </div>
           <div className="flex lg:block justify-center items-center gap-4 my-8">
-            <Link href={"/book-summary"}>
+            <Link href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Prive!" target="_blank">
               <button className="lg:hidden  text-xs rounded-full px-14 py-3  main-color-bg text-white font-blissful tracking-widest ">
                 Book
               </button>
