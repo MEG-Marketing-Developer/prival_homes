@@ -201,7 +201,7 @@ const privalWestWarf = () => {
       </div>
       <div className="flex mt-16 justify-between lg:justify-start items-center flex-wrap">
         <div className="flex lg:flex-col text-[18px] lg:text-[50px] tracking-wider ">
-          <div>
+          {/* <div>
             <div className="flex font-blissful flex-col lg:flex-row">
               AED 1200{" "}
               <span className="text-[12px] lg:text-[35px] ml-20 -mt-4 lg:ml-1 lg:mt-4">
@@ -212,7 +212,7 @@ const privalWestWarf = () => {
             <div className="text-[#535353] text-[12px] lg:text-[24px] lg:mt-2 italic">
               AED 400 Per Night
             </div>
-          </div>
+          </div> */}
           <div className="lg:hidden flex gap-3 lg:gap-0 ml-6 lg:ml-0 ">
             <div className="text-[10px] relative border border-[#141414] flex items-center justify-center px-2 h-10 lg:px-6 lg:h-16 rounded-md lg:mr-5 ">
               <div className="absolute -top-3 left-5 px-1 bg-white text-sm">
