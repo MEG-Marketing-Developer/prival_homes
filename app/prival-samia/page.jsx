@@ -20,7 +20,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const privalSamia = () => {
+const PrivalSamia = () => {
   const router = useRouter();
   const items = [
     { name: "item1", img: prop1, alt: "prop1" },
@@ -376,4 +376,4 @@ const privalSamia = () => {
   );
 };
 
-export default privalSamia;
+export default PrivalSamia;

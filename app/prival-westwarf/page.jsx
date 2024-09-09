@@ -20,7 +20,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const privalWestWarf = () => {
+const PrivalWestWarf = () => {
   const router = useRouter();
   const items = [
     { name: "item1", img: prop1, alt: "prop1" },
@@ -376,4 +376,4 @@ const privalWestWarf = () => {
   );
 };
 
-export default privalWestWarf;
+export default PrivalWestWarf;

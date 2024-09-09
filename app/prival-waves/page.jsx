@@ -20,7 +20,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const privalWaves = () => {
+const PrivalWaves = () => {
   const router = useRouter();
   const items = [
     { name: "item1", img: prop1, alt: "prop1" },
@@ -376,4 +376,4 @@ const privalWaves = () => {
   );
 };
 
-export default privalWaves;
+export default PrivalWaves;
