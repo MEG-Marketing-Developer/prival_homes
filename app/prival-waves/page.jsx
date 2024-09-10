@@ -1,19 +1,24 @@
 "use client";
 import Image from "next/image";
-import prop1 from "@/public/images/propertyDetails/propDetails1.png";
-import prop2 from "@/public/images/propertyDetails/propDetails2.png";
-import prop3 from "@/public/images/propertyDetails/propDetails3.png";
-import prop4 from "@/public/images/propertyDetails/propDetails4.png";
-import prop5 from "@/public/images/propertyDetails/propDetails5.png";
+import prop1 from "@/public/images/propertyDetails/prival-waves/1.jpg";
+import prop2 from "@/public/images/propertyDetails/prival-waves/2.jpg";
+import prop3 from "@/public/images/propertyDetails/prival-waves/3.jpg";
+import prop4 from "@/public/images/propertyDetails/prival-waves/4.jpg";
+import prop5 from "@/public/images/propertyDetails/prival-waves/5.jpg";
+import prop6 from "@/public/images/propertyDetails/prival-waves/6.jpg";
+import prop7 from "@/public/images/propertyDetails/prival-waves/7.jpg";
+import prop8 from "@/public/images/propertyDetails/prival-waves/8.jpg";
+import prop9 from "@/public/images/propertyDetails/prival-waves/9.jpg";
+import prop10 from "@/public/images/propertyDetails/prival-waves/10.jpg";
+import prop11 from "@/public/images/propertyDetails/prival-waves/11.jpg";
+import prop12 from "@/public/images/propertyDetails/prival-waves/12.jpg";
 import bed from "@/public/images/propertyDetails/icons/bedIcon.svg";
 import bathroom from "@/public/images/propertyDetails/icons/bathroom.svg";
 import floor from "@/public/images/propertyDetails/icons/bathroom.svg";
 import spm from "@/public/images/propertyDetails/icons/spm.svg";
-import walk from "@/public/images/propertyDetails/icons/walk.svg";
 import persons from "@/public/images/propertyDetails/icons/persons.svg";
 import heart from "@/public/images/propertyDetails/icons/heart.svg";
 import google from "@/public/images/propertyDetails/icons/google.svg";
-import map from "@/public/images/propertyDetails/icons/map.svg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import Link from "next/link";
@@ -28,6 +33,13 @@ const PrivalWaves = () => {
     { name: "item3", img: prop3, alt: "prop3" },
     { name: "item4", img: prop4, alt: "prop4" },
     { name: "item5", img: prop5, alt: "prop5" },
+    { name: "item6", img: prop6, alt: "prop6" },
+    { name: "item7", img: prop7, alt: "prop7" },
+    { name: "item8", img: prop8, alt: "prop8" },
+    { name: "item9", img: prop9, alt: "prop9" },
+    { name: "item10", img: prop10, alt: "prop10" },
+    { name: "item11", img: prop11, alt: "prop11" },
+    { name: "item12", img: prop12, alt: "pro12" },
   ];
   const services = [
     { name: "Additional Towel" },
@@ -40,17 +52,35 @@ const PrivalWaves = () => {
     { name: "Air-Conditioned" },
     { name: "Free Parking" },
   ];
+  const times = [
+    { place: "Burj Khalifa", mins: "10 mins. drive" },
+    { place: "Dubai Fountain", mins: "10 mins.  drive" },
+    { place: "Dubai Opera", mins: "10 mins.  drive away" },
+    { place: "Burj Al Arab", mins: "20 mins. Drive " },
+    { place: "The Walk JBR", mins: "25 mins. Drive" },
+    { place: "Palm Jumeirah", mins: "25 mins Drive" },
+    { place: "Metro", mins: "5-10 mins Drive" },
+    { place: "City Walk", mins: "15 mins. Drive" },
+    {
+      place: "Dubai International Airport (DXB)",
+      mins: "Approximately 20-25 minutes drive ",
+    },
+    {
+      place: "Al Maktoum International Airport (DWC)",
+      mins: "Located about 40-50 minutes Drive",
+    },
+  ];
   const facilities = [
-    { name: "Air Conditioning" },
-    { name: "Coffee Maker" },
-    { name: "Dishes and silverware" },
-    { name: "Flat-screen TV" },
-    { name: "Free Parking on premises" },
-    { name: "Hair Dryer" },
-    { name: "Microwave" },
+    { name: "Sauna" },
+    // { name: "Cinema" },
+    { name: "Gym" },
+    // { name: "Steam" },
+    // { name: "Free Parking on premises" },
+    // { name: "Hair Dryer" },
+    // { name: "Microwave" },
     { name: "Swimming Pool" },
-    { name: "Towels, bedsheets, soap and toilet paper" },
-    { name: "Washing Machine" },
+    // { name: "Towels, bedsheets, soap and toilet paper" },
+    // { name: "Washing Machine" },
   ];
   const addOnes = [
     { name: "Baby high chair: AED 60 / Night" },
@@ -61,12 +91,12 @@ const PrivalWaves = () => {
 
   const nextItem = () => {
     setCurrentItem((prev) => (prev === totalItems - 1 ? 1 : prev + 1));
-    router.push(`property-details#item${currentItem}`);
+    router.push(`prive-actii#item${currentItem}`);
   };
 
   const prevItem = () => {
     setCurrentItem((prev) => (prev === 0 ? totalItems - 1 : prev - 1));
-    router.push(`property-details#item${currentItem}`);
+    router.push(`prive-actii#item${currentItem}`);
   };
   return (
     <div className="container mx-auto sm:px-[90px] 2xl:px-[160px] py-10">
@@ -153,7 +183,7 @@ const PrivalWaves = () => {
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />{" "}
-            2 king size bed
+            1 Queen size bed
           </div>
           <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
@@ -161,10 +191,10 @@ const PrivalWaves = () => {
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />{" "}
-            3 bathrooms
+            1 bathroom
           </div>
         </div>
-        <div className="grid grid-cols-4 justify-items-start lg:mt-16 mt-8">
+        <div className="grid grid-cols-3 justify-items-center lg:mt-16 mt-8">
           <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={floor}
@@ -179,23 +209,23 @@ const PrivalWaves = () => {
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />{" "}
-            30 sqm
+            45 sqm
           </div>
-          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+          {/* <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={walk}
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />
-            30 mins walk
-          </div>
+            10 mins drive
+          </div> */}
           <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={persons}
               alt="bed"
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
             />
-            1 adult, 3 Children
+            2 adults, 1 Children
           </div>
         </div>
       </div>
@@ -221,7 +251,9 @@ const PrivalWaves = () => {
               25/03/2023
             </div>
             <div className="text-[10px] relative border border-[#141414] flex items-center justify-center px-2 h-10 lg:px-6 lg:h-16  rounded-md lg:mr-10">
-              <span className="absolute -top-3 left-5 px-1 bg-white text-sm">TO</span>
+              <span className="absolute -top-3 left-5 px-1 bg-white text-sm">
+                TO
+              </span>
               28/03/2023
             </div>
           </div>
@@ -240,14 +272,20 @@ const PrivalWaves = () => {
               </div>
               28/03/2023
             </div>
-           <Link href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Prive!" target="_blank">
+            <Link
+              href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Waves!"
+              target="_blank"
+            >
               <button className="hidden lg:block text-2xl rounded-full px-28 py-5 main-color-bg text-white font-blissful tracking-widest ">
                 Book
               </button>
             </Link>
           </div>
           <div className="flex lg:block justify-center items-center gap-4 my-8">
-           <Link href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Prive!" target="_blank">
+            <Link
+              href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Waves!"
+              target="_blank"
+            >
               <button className="lg:hidden  text-xs rounded-full px-14 py-3  main-color-bg text-white font-blissful tracking-widest ">
                 Book
               </button>
@@ -269,17 +307,37 @@ const PrivalWaves = () => {
             Description
           </h1>
           <p className="mt-4 text-xs leading-5 lg:text-2xl">
-            DAMAC Privé is an exceptional collection of apartments designed and
-            finished to the highest standards, looking out over the Dubai Canal
-            waterway and beyond. The apartments are a reflection of the
-            signature Dubai lifestyle and seem to be perfect that has been
-            designed to present you with an unmatched way of life. Lined with
-            exceptional amenities and facilities, the development aims to
-            enhance and enrich your whole quality of living standards.
+            Discover the epitome of sophistication at Prival Homes Chic Studio
+            By The Canal in Business Bay, where luxury meets comfort in a
+            stunning waterfront setting. This exclusive studio offers a stylish
+            and modern design, with top-of-the-line amenities and breathtaking
+            views of the canal
           </p>
           <p className="divider h-20 "></p>
         </div>
       </div>
+      <div>
+        <h1 className="text-lg lg:text-4xl font-blissful main-color tracking-widest mb-4">
+          Time to Arrive
+        </h1>
+        <p className="mt-4 text-xs leading-5 lg:text-2xl">
+          Accessible to Dubai Water Canal which attracts you for line of
+          restaurants, jogging and cycling activities.
+        </p>
+        <div className="flex justify-start items-center gap-4 flex-wrap h-auto mt-4">
+          {times.map((time, index) => (
+            <span
+              key={index}
+              className="bg-[#E1E1E1] text-[10px] lg:text-lg px-4 lg:px-6 py-2 rounded-md "
+            >
+              <strong>{time.place}: </strong>
+              {time.mins}
+            </span>
+          ))}
+        </div>
+        <p className="divider h-20 mt-14 lg:mt-0 "></p>
+      </div>
+
       <div>
         <h1 className="text-lg lg:text-4xl font-blissful main-color tracking-widest mb-4">
           Services
@@ -355,21 +413,31 @@ const PrivalWaves = () => {
           <h1 className="text-lg lg:text-4xl font-blissful main-color tracking-widest lg:mb-6">
             Location
           </h1>
-          <button className="text-xs lg:text-[26px]  justify-center items-center  text-white font-blissful tracking-widest rounded-xl flex border main-color-bg lg:pl-6 py-1 lg:py-3 px-4 lg:px-9 ">
-            <Image
-              src={google}
-              alt="heart"
-              className="w-5  mr-4 lg:mr-8 lg:w-10"
-            />
-            view on google
-          </button>
+          <Link
+            href="https://maps.app.goo.gl/typv66oG7dsV31Gi8"
+            target="_blank"
+          >
+            <button className="text-xs lg:text-[26px]  justify-center items-center  text-white font-blissful tracking-widest rounded-xl flex border main-color-bg lg:pl-6 py-1 lg:py-3 px-4 lg:px-9 ">
+              <Image
+                src={google}
+                alt="heart"
+                className="w-5  mr-4 lg:mr-8 lg:w-10"
+              />
+              view on google
+            </button>
+          </Link>
         </div>
         <div>
-          <Image
-            src={map}
-            alt="heart"
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5819008474737!2d55.28402!3d25.1835916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69f588bd44c5%3A0xdb5e8f11ad83fd29!2sWaves%20Tower%20by%20KASCO!5e0!3m2!1sen!2seg!4v1725974953090!5m2!1sen!2seg"
+            width="100%"
+            height="450"
+            // style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
             className="object-cover mt-8 h-40 lg:h-80"
-          />
+          ></iframe>
         </div>
       </div>
     </div>
