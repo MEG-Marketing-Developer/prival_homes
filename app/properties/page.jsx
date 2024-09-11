@@ -1,5 +1,5 @@
 "use client";
-import axios from 'axios';
+import axios from "axios";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { MdBathroom } from "react-icons/md";
@@ -8,14 +8,15 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdBedroomParent } from "react-icons/md";
 import map from "@/public/images/properties/map.svg";
 import prop1 from "@/public/images/properties/prop1.svg";
-import act from "@/public/images/properties/ACTII.PNG";
+import act from "@/public/images/properties/1.png";
+import damacHeights from "@/public/images/properties/2.jpg";
 import merano from "@/public/images/properties/Merano.jpeg";
 import prive from "@/public/images/properties/Prive.jpg";
 import waves from "@/public/images/properties/Waves.jpg";
 import west from "@/public/images/properties/west.jpg";
 import Link from "next/link";
 const PropertiesPage = () => {
-  const [inWishlist, setAddInWishlist] = useState(false);
+  // const [inWishlist, setAddInWishlist] = useState(false);
   const [wishlist, setWishlist] = useState([]);
 
   const [data, setData] = useState([]);
@@ -33,10 +34,20 @@ const PropertiesPage = () => {
     }
   };
 
-  const Images = [prive, west, act , merano , prop1 ,  waves]
-  // console.log(Images, "Images")
+  const Images = [prive, west, act, merano, damacHeights, waves, prop1, prop1];
+
+  const imageMapping = {
+    "Prival - Prive": prive,
+    "Prival - West Warf": west,
+    "Prive - ACT II": act,
+    "Prival - Merano": merano,
+    "Prival – Damac Heights": damacHeights,
+    "Prival - Waves": waves,        
+  };
+  
   useEffect(() => {
-    axios.get("/api/get-properties")
+    axios
+      .get("/api/get-properties")
       .then((response) => {
         setData(response.data);
         setLoading(false);
@@ -49,7 +60,7 @@ const PropertiesPage = () => {
   }, []);
   // const idArray = data.map(item => item.id);
   //       console.log(idArray)
-  //       console.log(Array.isArray(idArray))  
+  //       console.log(Array.isArray(idArray))
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
@@ -246,78 +257,83 @@ const PropertiesPage = () => {
             />
           </div>
           <div className="grid grid-cols-2 mb-10 gap-4 md:justify-items-center lg:gap-8 order-1 md:w-3/4 md:mx-auto">
-          {data.map(item => (
-            <div key={item.id}
-              data-aos="fade-up"
-              className="relative shadow-md max-w-[25rem] w-[21rem]"
+            {data.map((item) => (
+              <div
+                key={item.id}
+                data-aos="fade-up"
+                className="relative shadow-md max-w-[25rem] w-[21rem]"
               >
-               <figure
-            onClick={() => addToWishlist(item.id)}
-            className="absolute text-4xl right-6 top-7 z-40 cursor-pointer"
-          >
-            {wishlist.includes(item.id) ? (
-              <FaHeart color="red" />
-            ) : (
-              <FaRegHeart />
-            )}
-          </figure>
-              <Link href={`/${item.name.replace(/\s+/g, '').replace(/–/g, "-").toLowerCase()}`}>
-                <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
-                  <Image
-                    src= {Images[item.id % Images.length]}
-                    fill
-                    alt="properties"
-                    className="object-cover rounded-xl"
-                  />
+                <figure
+                  onClick={() => addToWishlist(item.id)}
+                  className="absolute text-4xl right-6 top-7 z-40 cursor-pointer"
+                >
+                  {wishlist.includes(item.id) ? (
+                    <FaHeart color="red" />
+                  ) : (
+                    <FaRegHeart />
+                  )}
                 </figure>
-              </Link>
-              <div className="px-3 py-4">
-                <h4 className="text-[.5rem] lg:text-lg min-h-16">
-                  {item.name} 
-                </h4>
-                <div className="flex gap-2 mt-4">
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm ">
-                    <span>
-                      <MdBedroomParent className="main-color mr-1 md:ml-2 " />
-                    </span>
-                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
-                      1 bedroom
-                    </span>
+                <Link
+                  href={`/${item.name
+                    .replace(/\s+/g, "")
+                    .replace(/–/g, "-")
+                    .toLowerCase()}`}
+                >
+                  <figure className="relative h-[180px] lg:h-[300px] rounded-xl">
+                    <Image
+                      src={imageMapping[item.name] || prop1} 
+                      fill
+                      alt="properties"
+                      className="object-cover rounded-xl"
+                    />
+                  </figure>
+                </Link>
+                <div className="px-3 py-4">
+                  <h4 className="text-[.5rem] lg:text-lg min-h-16">
+                    {item.name}
+                  </h4>
+                  <div className="flex gap-2 mt-4">
+                    <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm ">
+                      <span>
+                        <MdBedroomParent className="main-color mr-1 md:ml-2 " />
+                      </span>
+                      <span className="text-[.4rem] md:text-xs whitespace-nowrap">
+                        1 bedroom
+                      </span>
+                    </div>
+                    <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm">
+                      <span>
+                        <MdBathroom className="main-color mr-1 md:ml-2 " />
+                      </span>
+                      <span className="text-[.4rem] md:text-xs whitespace-nowrap">
+                        1 bathroom
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex bg-[#E6E6E6] justify-center md:justify-start w-full items-center p-[.1875rem] sm:p-2 rounded-sm">
-                    <span>
-                      <MdBathroom className="main-color mr-1 md:ml-2 " />
-                    </span>
-                    <span className="text-[.4rem] md:text-xs whitespace-nowrap">
-                      1 bathroom
-                    </span>
-                  </div>
+                  {/* <h4 className=" mt-5 text-xs lg:text-lg">AED 700.00 /Night</h4> */}
+                  <Link
+                    href={`/${item.name
+                      .replace(/\s+/g, "")
+                      .replace(/–/g, "-")
+                      .toLowerCase()}`}
+                  >
+                    <button className="px-8 py-2 text-white mt-10 tracking-[3px] rounded-full main-color-bg uppercase">
+                      Book Now
+                    </button>
+                  </Link>
                 </div>
-                {/* <h4 className=" mt-5 text-xs lg:text-lg">AED 700.00 /Night</h4> */}
-                <Link href={`/${item.name.replace(/\s+/g, '').replace(/–/g, "-").toLowerCase()}`}>
-                <button className="px-8 py-2 text-white mt-10 tracking-[3px] rounded-full main-color-bg uppercase">
-                  Book Now
-                 </button>
-                 </Link>
               </div>
-            </div>
-          ))}
-            
-
-  
-
-       
-       
+            ))}
           </div>
         </div>
-        <div className="flex justify-center lg:justify-start items-center lg:ml-32 xl:ml-52 2xl:ml-72 lg:-mt-16 ">
+        {/* <div className="flex justify-center lg:justify-start items-center lg:ml-32 xl:ml-52 2xl:ml-72 lg:-mt-16 ">
           <div
             data-aos="fade-up"
             className="btn w-[200px] lg:w-[300px] lg:text-xl mt-10"
           >
             Learn more
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
