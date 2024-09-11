@@ -8,7 +8,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdBedroomParent } from "react-icons/md";
 import map from "@/public/images/properties/map.svg";
 import prop1 from "@/public/images/properties/prop1.svg";
-import act from "@/public/images/properties/1.png";
+import act from "@/public/images/properties/1.PNG";
 import damacHeights from "@/public/images/properties/2.jpg";
 import merano from "@/public/images/properties/Merano.jpeg";
 import prive from "@/public/images/properties/Prive.jpg";
