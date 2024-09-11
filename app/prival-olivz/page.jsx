@@ -28,7 +28,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const PrivalMajestine = () => {
+const PrivalOlivz = () => {
   const router = useRouter();
   const items = [
     { name: "item1", img: prop1, alt: "prop1" },
@@ -454,4 +454,4 @@ const PrivalMajestine = () => {
   );
 };
 
-export default PrivalMajestine;
+export default PrivalOlivz;
