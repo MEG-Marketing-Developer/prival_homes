@@ -315,9 +315,9 @@ const PrivalActII = () => {
           </h1>
           <p className="mt-4 text-xs leading-5 lg:text-2xl">
             Prival Homes offers a fully furnished 1-bedroom apartment situated
-            in one of Emaar's latest upscale project, Act One | Act Two. This
+            in one of Emaar&apos;s latest upscale project, Act One | Act Two. This
             property is centrally located in the vibrant Opera District, close
-            proximity to Dubai's premier attractions, including the Burj
+            proximity to Dubai&apos;s premier attractions, including the Burj
             Khalifa, Dubai Mall.
           </p>
           <p className="divider h-20 "></p>

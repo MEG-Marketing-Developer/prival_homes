@@ -309,7 +309,7 @@ const PrivalMerano = () => {
           <p className="mt-4 text-xs leading-5 lg:text-2xl">
             This apartment offers easy access to nearby amenities, including
             shopping centers, restaurants, and public transportation. Whether
-            you're a busy professional or a small family, the Prival Homes
+            you&apos;re a busy professional or a small family, the Prival Homes
             Tranquil Fully Furnished 2BR apartment is the perfect place to call
             home
           </p>
