@@ -409,11 +409,20 @@ const PrivalPrive = () => {
       </div>
       <div>
         <h1 className="text-lg lg:text-4xl font-blissful main-color tracking-widest mb-6">
-          Instructions
+          House Rules
         </h1>
         <ul className="list-disc text-xs lg:text-xl ml-4">
-          <li className="mb-2">No smoking</li>
-          <li>No parties or events</li>
+          <li className="mb-2">Pets not allowed</li>
+          <li>Events are not allowed </li>
+          <li>Smoking Vape or E-cigarretes are nt allowed </li>
+          <li>Quiet Hours will be from 10:00 pm til 9:00 am </li>
+          <li>Maximum Guests - 2 pax </li>
+          <li>The standard check in time is 3:00 pm to 7:00 pm </li>
+          <li>The standard check out time is 12:00 pm.</li>
+          <li className="md:mr-[40%]">
+            Check in Method -Prival&apos;s Guests Experience Maker will assists you
+            for your check in.They will be reaching you prior to your arrival.
+          </li>
         </ul>
         <p className="divider h-20 "></p>
       </div>
@@ -442,9 +451,9 @@ const PrivalPrive = () => {
             width="100%"
             height="450"
             // style="border:0;"
-            allowfullscreen=""
+            // allowFullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
             className="object-cover mt-8 h-40 lg:h-80"
           ></iframe>
         </div>

@@ -121,7 +121,7 @@ const PrivalOlivz = () => {
           <span>
             <MdKeyboardArrowRight />
           </span>
-          <span>Prival Majestine</span>
+          <span>Prival Olivz</span>
         </div>
         <div className=" carousel w-full ">
           {items.map((item, index) => (
@@ -284,7 +284,7 @@ const PrivalOlivz = () => {
               28/03/2023
             </div>
             <Link
-              href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Majestine!"
+              href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Olivz!"
               target="_blank"
             >
               <button className="hidden lg:block text-2xl rounded-full px-28 py-5 main-color-bg text-white font-blissful tracking-widest ">
@@ -294,7 +294,7 @@ const PrivalOlivz = () => {
           </div>
           <div className="flex lg:block justify-center items-center gap-4 my-8">
             <Link
-              href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Majestine!"
+              href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Olivz!"
               target="_blank"
             >
               <button className="lg:hidden  text-xs rounded-full px-14 py-3  main-color-bg text-white font-blissful tracking-widest ">
@@ -409,12 +409,21 @@ const PrivalOlivz = () => {
         <p className="divider h-20 "></p>
       </div>
       <div>
-        <h1 className="text-lg lg:text-4xl font-blissful main-color tracking-widest mb-6">
-          Instructions
+      <h1 className="text-lg lg:text-4xl font-blissful main-color tracking-widest mb-6">
+          House Rules
         </h1>
         <ul className="list-disc text-xs lg:text-xl ml-4">
-          <li className="mb-2">No smoking</li>
-          <li>No parties or events</li>
+          <li className="mb-2">Pets not allowed</li>
+          <li>Events are not allowed </li>
+          <li>Smoking Vape or E-cigarretes are nt allowed </li>
+          <li>Quiet Hours will be from 10:00 pm til 9:00 am </li>
+          <li>Maximum Guests - 2 pax </li>
+          <li>The standard check in time is 3:00 pm to 7:00 pm </li>
+          <li>The standard check out time is 12:00 pm.</li>
+          <li className="md:mr-[40%]">
+            Check in Method -Prival&apos;s Guests Experience Maker will assists you
+            for your check in.They will be reaching you prior to your arrival.
+          </li>
         </ul>
         <p className="divider h-20 "></p>
       </div>
