@@ -34,7 +34,6 @@ const PropertiesPage = () => {
     }
   };
 
-  const Images = [prive, west, act, merano, damacHeights, waves, prop1, prop1];
 
   const imageMapping = {
     "Prival - Prive": prive,
@@ -238,9 +237,9 @@ const PropertiesPage = () => {
           >
             Properties
           </h3>
-          <h4 data-aos="fade-right" className="mb-8 text-[.9rem] md:text-2xl">
+          {/* <h4 data-aos="fade-right" className="mb-8 text-[.9rem] md:text-2xl">
             Showing 440 results search
-          </h4>
+          </h4> */}
         </div>
         <div className=" lg:flex justify-start items-start gap-10  -mx-[10px] sm:mx-0">
           <div

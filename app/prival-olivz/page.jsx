@@ -174,8 +174,8 @@ const PrivalOlivz = () => {
         </div>
       </div>
       <div className="bg-[#E1E1E1]  rounded-md flex flex-col mt-6 lg:mt-11 lg:py-16 lg:px-16 px-6 py-6 ">
-        <div className="grid grid-cols-3 justify-items-center ">
-          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+        <div className="grid grid-cols-4 justify-items-center ">
+          {/* <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={bed}
               alt="bed"
@@ -187,7 +187,7 @@ const PrivalOlivz = () => {
               className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-3"
             />{" "}
             1 twin single bed
-          </div>
+          </div> */}
           <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={bed}
@@ -204,16 +204,6 @@ const PrivalOlivz = () => {
             />{" "}
             1 bathroom
           </div>
-        </div>
-        <div className="grid grid-cols-3 justify-items-center lg:mt-16 mt-8">
-          <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
-            <Image
-              src={floor}
-              alt="bed"
-              className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
-            />
-            25th Floor
-          </div>
           <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={spm}
@@ -222,14 +212,6 @@ const PrivalOlivz = () => {
             />{" "}
             89.43 sqm
           </div>
-          {/* <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
-            <Image
-              src={walk}
-              alt="bed"
-              className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
-            />
-            10 mins drive
-          </div> */}
           <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
             <Image
               src={persons}
@@ -239,6 +221,26 @@ const PrivalOlivz = () => {
             2 adults, 1 Children
           </div>
         </div>
+        {/* <div className="grid grid-cols-3 justify-items-center lg:mt-16 mt-8"> */}
+          {/* <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+            <Image
+              src={floor}
+              alt="bed"
+              className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
+            />
+            25th Floor
+          </div> */}
+          
+          {/* <div className="text-[6px] lg:text-[22px] xl:text-[24px] flex items-center">
+            <Image
+              src={walk}
+              alt="bed"
+              className="w-3 h-3 lg:w-8 lg:h-8 xl:w-8 xl:h-8 mr-1 lg:mr-3"
+            />
+            10 mins drive
+          </div> */}
+          
+        {/* </div> */}
       </div>
       <div className="flex mt-16 justify-between lg:justify-start items-center flex-wrap">
         <div className="flex lg:flex-col text-[18px] lg:text-[50px] tracking-wider ">
@@ -284,24 +286,34 @@ const PrivalOlivz = () => {
               28/03/2023
             </div>
             <Link
-              href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Olivz!"
+              href="https://wa.me/+97145750248?text=Hello%2C%20I%20am%20interested%20in%20Prival%20Olivz!"
               target="_blank"
             >
               <button className="hidden lg:block text-2xl rounded-full px-28 py-5 main-color-bg text-white font-blissful tracking-widest ">
                 Book
               </button>
             </Link>
+            <div className="lg:flex lg:justify-end lg:ml-6 hidden ">
+              <button className="text-[12px] lg:text-[20px] font-blissful tracking-widest rounded-xl flex border border-[#262626] pl-4 lg:pl-8  h-10 pt-2 lg:py-12 lg:pt-5 px-8 lg:px-10">
+                Save as wishlist
+                <Image
+                  src={heart}
+                  alt="heart"
+                  className="w-4 lg:w-6 ml-3 lg:ml-6 mt-1 "
+                />
+              </button>
+            </div>
           </div>
           <div className="flex lg:block justify-center items-center gap-4 my-8">
             <Link
-              href="https://wa.me/+201200000000?text=Hello%20Ahmed%2C%20I%20am%20interested%20in%20Prival Olivz!"
+              href="https://wa.me/+97145750248?text=Hello%2C%20I%20am%20interested%20in%20Prival%20Olivz!"
               target="_blank"
             >
               <button className="lg:hidden  text-xs rounded-full px-14 py-3  main-color-bg text-white font-blissful tracking-widest ">
                 Book
               </button>
             </Link>
-            <div className="flex lg:justify-end lg:mt-6  ">
+            <div className="flex lg:justify-end lg:mt-6 lg:hidden ">
               <button className="text-[12px] lg:text-[20px] font-blissful tracking-widest rounded-xl flex border border-[#262626] pl-4 lg:pl-8  h-10 pt-2 lg:py-12 lg:pt-5 px-8 lg:px-10">
                 Save as wishlist
                 <Image
@@ -446,7 +458,7 @@ const PrivalOlivz = () => {
             </button>
           </Link>
         </div>
-        <div>
+        <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.042661831536!2d55.396245199999996!3d25.168037299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f67affc8de565%3A0xcd00d3c8a34dd12d!2sOLIVZ%20Residence%20by%20Danube%20Properties!5e0!3m2!1sen!2seg!4v1725977980848!5m2!1sen!2seg"
             width="100%"
